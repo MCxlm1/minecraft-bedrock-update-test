@@ -1,0 +1,460 @@
+<h2 id="h_01KZ41YABQ8N8QHZHVFMGEYDH3">Technical Updates</h2><h3 id="h_01KZ41YABQ9340Z0SKDAN8ZQ27">Actor Components</h3><ul><li data-list-item-id="e7cbe6381c464d7f9327e59185aa65f57">Made schemas for the following components stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="e13fbfd195ed6fc2dc5ea3982b07b790e">minecraft:cannot_be_attacked</li>
+<li data-list-item-id="ed2f3ab66d6258e6e1de462caa170bae2">minecraft:ignore_cannot_be_attacked</li>
+<li data-list-item-id="e85f8ba92a26759a966dc05d59a378d72">minecraft:floats_in_liquid</li>
+<li data-list-item-id="e7050bebcaabacb8d2024e30d367e4166">minecraft:wants_jockey</li>
+</ul>
+</li></ul><h3 id="h_01KZ41YABRGNPCEMCBB58BHW9M">AI Components</h3><ul>
+<li data-list-item-id="e8dac1103a64424c7eb9d68181a8042a1">Made schemas for the following components stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="e305971fc1fdfb28f7bf6204e722d2b40">minecraft:annotation.open_door</li>
+<li data-list-item-id="e7fad3f683d8bf1a64dcb491ea167ee07">minecraft:bucketable</li>
+<li data-list-item-id="e52ef6600dc73d6fa5dee0ce5880cdefa">minecraft:hide</li>
+<li data-list-item-id="edc3de8337431f3eb7716e6c0beb14d00">minecraft:managed_wandering_trader</li>
+<li data-list-item-id="e21a828be6a7e5d69148d3174da6a2c65">minecraft:persistent</li>
+<li data-list-item-id="ef1f9da536a23099c10c6ac0ad09414a5">minecraft:trade_resupply</li>
+<li data-list-item-id="e63c21689f1108393dfb69f860ca02a31">minecraft:trust</li>
+</ul>
+</li>
+<li data-list-item-id="eedfd37a433770795105156e773a4752d">Made schemas for the following components stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="ef6c73ede57bc2be284bfba843d05535e">minecraft:jump.dynamic</li>
+<li data-list-item-id="e19b35d9bb2c642da415b1d2676e7eb91">minecraft:jump.static</li>
+</ul>
+</li>
+</ul><h3 id="h_01KZ41YABTGM6HZJR7MVARWPA1">AI Goals</h3><ul>
+<li data-list-item-id="edfd6079ee0464ff60390bc3d7f4c3fb4">Made schemas for the following goals stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="ed51e9006d8340746711e51bb463092b0">minecraft:behavior.leap_at_target</li>
+<li data-list-item-id="e75de49acd687a6f346099912dcf817bb">minecraft:behavior.silverfish_merge_with_stone</li>
+<li data-list-item-id="e069e9c09ff9bf3e60549ceb7069cf8bb">minecraft:behavior.silverfish_wake_up_friends</li>
+</ul>
+</li>
+<li data-list-item-id="e72b87e49a63d5d3f3b1a7fcfe7063dfc">Made schemas for the following goals stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="e54167af040171240ad4a3a7883a21641">minecraft:behavior.squid_dive</li>
+<li data-list-item-id="e9bb7ae488ebc54a98dda9ec5a72183ab">minecraft:behavior.squid_flee</li>
+<li data-list-item-id="e86db9d1bdfa6b0b7dd2952a546c5624b">minecraft:behavior.squid_idle</li>
+<li data-list-item-id="ece9025d3e96b44cf3f2e7b30ad165fba">minecraft:behavior.squid_move_away_from_ground</li>
+<li data-list-item-id="e63949314806a7d74c58ba4610a024206">minecraft:behavior.squid_out_of_water</li>
+</ul>
+</li>
+<li data-list-item-id="e300ddca74a6fa838f1545a129d07bba3">Made the schema for minecraft:behavior.beg stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.40 and newer. Int Range field look_time now only accepts an object with min and max values. Other formats will fail to parse</li>
+<li data-list-item-id="ee9c39403f34c9041737bd21e46a7f006">Made the schema for minecraft:behavior.drink_potion stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.40 and newer</li>
+<li data-list-item-id="e70dcb5fbe42ca2b6a27882fc38dfe4e5">Made the schema for minecraft:behavior.float_wander stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.40 and newer. Float Range field float_duration now only accepts an object with min and max values. Other formats will fail to parse</li>
+<li data-list-item-id="ec9dbf9f0484b4b6ddf51e915cbc8fbad">Made the schema for minecraft:behavior.summon_entity stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.40 and newer</li>
+<li data-list-item-id="edf70ff65b0e0cfefdc7e0a5f22cfe457">Made schemas for the following goals stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="e27502e1c6d4b3333205c0efb5f7b49ae">minecraft:behavior.nap</li>
+<li data-list-item-id="e73035d086efea64887edef98f9d67dba">minecraft:behavior.move_to_block</li>
+<li data-list-item-id="e5f069d596bacff572d686927ab447f7d">minecraft:behavior.snacking</li>
+<li data-list-item-id="efee06a262cbcca320e184a50fa228fd2">minecraft:behavior.stalk_and_pounce_on_target</li>
+</ul>
+</li>
+<li data-list-item-id="edafd02f79fe37b508c9506509a2d0b76">Made schemas for the following goals stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="e05e9fffddc4c213016c4cc8353ffbdf3">minecraft:behavior.charge_held_item</li>
+<li data-list-item-id="e307d53d5ad9a21c669b5534a482ab765">minecraft:behavior.eat_block</li>
+<li data-list-item-id="e2defb02a7f17b239e2f95e8efcd8995d">minecraft:behavior.knockback_roar</li>
+<li data-list-item-id="ec2b9a76665b89a4ca9059a99060dd6f2">minecraft:behavior.ranged_attack</li>
+</ul>
+</li>
+<li data-list-item-id="e27b80a81547b262bdb017f4ba3ce5136">Actor goal minecraft:behavior.ranged_attack takes a float range for attack_interval instead of attack_interval_min and attack_interval_max for versions 1.26.40 and newer.</li>
+<li data-list-item-id="e7c906d7422510909a8681e767a812695">Made schemas for the following actor components stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.40 and newer.<ul>
+<li data-list-item-id="eb01edf32a25b9d56b87287ede8ef733d">minecraft:on_death</li>
+<li data-list-item-id="e1cfa216e5f7d189a7c5fd7d2bdd5dccf">minecraft:on_friendly_anger</li>
+<li data-list-item-id="eccc89489334893bda30596a93c93a63b">minecraft:on_hurt_by_player</li>
+<li data-list-item-id="e2159e52111f06b821cd92ee3ff93a65b">minecraft:on_hurt</li>
+<li data-list-item-id="ec6fe22b7354b5e8e65400f73475d0efd">minecraft:on_ignite</li>
+<li data-list-item-id="ee083f5380c5516a409eed52820e750f8">minecraft:on_start_landing</li>
+<li data-list-item-id="e28be8dde210cbbee078b7c8ae6684e50">minecraft:on_start_takeoff</li>
+<li data-list-item-id="ef34400fb0cc2a6c6248e36f838877bec">minecraft:on_target_acquired</li>
+<li data-list-item-id="e95944eb7238cecac7f80c5374b662134">minecraft:on_target_escape</li>
+<li data-list-item-id="e1ca31ab4d04d2d2d4f6060832810061d">minecraft:on_wake_with_owner</li>
+</ul>
+</li>
+<li data-list-item-id="ed2d661ab9715d3488eb71dd289a49ec4">Fixed a bug where the on_kill event in the following behavior components was incorrectly mapped to the on_attack field, causing the event to never fire when an entity killed its target. The fix applies to entity definitions with format version 1.26.40 and above.<ul>
+<li data-list-item-id="e1e9abfb234d4b76e6b840731d24c82c9">minecraft:behavior.melee_attack</li>
+<li data-list-item-id="ec25208880056f435a50fa0fa9aaf6065">minecraft:behavior.melee_box_attack</li>
+<li data-list-item-id="e58426b907d86bb519133d72cb8b325a5">minecraft:behavior.delayed_attack</li>
+<li data-list-item-id="e792bb1566cfa2951977cf5e747eec690">minecraft:behavior.stomp_attack</li>
+<li data-list-item-id="e73a67bf949947351f6fbc0a2f43512bd">minecraft:behavior.use_kinetic_weapon</li>
+</ul>
+</li>
+</ul><h3 id="h_01KZ41YAC1ZK6Y060THPBVKEYF">API</h3><ul>
+<li data-list-item-id="e2001f45d08e777c9a748f310db57d2a5">Released @minecraft/server version 2.9.0</li>
+<li data-list-item-id="e8cb3b38613a4114825ca23023c7c4482">Added @minecraft/server version 2.10.0-beta</li>
+<li data-list-item-id="e9cc7ba6607e40ca5ff4c029c84b20831">Fixed invulnerable timer bypass when changing before hurt event damage below source amount</li>
+<li data-list-item-id="ec14ab12ffdac898c0cc5fb27237d359a">Moved nameplateDepthTested and nameplateRenderDistance from beta to V2.8.0</li>
+<li data-list-item-id="e9c1165c5cc3767119cacc5d623dd216a">Moved SoundInstance class from beta to V1.2.0.</li>
+<li data-list-item-id="e3c6c76cc44542dcd7aa12541798e38d6">Moved SoundInstance.stop from beta to V2.9.0.</li>
+<li data-list-item-id="eaea3b9ca58e5057ef0f761cdd457cc4c">Moved Player.playSound returning a SoundInstance from beta to V1.2.0.</li>
+<li data-list-item-id="e360b8cf158327bfdfd2d174619e9e767">Moved Dimension.playSound returning a SoundInstance from beta to V1.11.0.</li>
+<li data-list-item-id="e0b6b337cfe28473a076978e5714dfc66">Released Block.getParts from beta to scripts version 2.9.0</li>
+<li data-list-item-id="e8c0ac35466918b0b5b32729e282591d2">Changed EntityFogComponent -&gt; FogSettings, EntityFogComponentError -&gt; FogSettingsError, and added fogSettings property to Player in @minecraft/server beta. FogSettings is functionally identical to EntityFogComponent but is no longer accessed via Entity.getComponent, use Player.fogSettings instead.</li>
+<li data-list-item-id="eb5387a048186b869d6716984328cb028">Fixed issue where Dimension.fillBlocks would not work when called with a block filter</li>
+<li data-list-item-id="e88b14b45876a2a03c13fee4e756eecfa">Released class PlayerStartBreakingBlockAfterEvent from beta to v2.9.0</li>
+<li data-list-item-id="ef7e5085306d2af35dba7faa6bdc630ba">Released class PlayerStartBreakingBlockAfterEventSignal from beta to v2.9.0</li>
+<li data-list-item-id="e952c17d47dd9bc7dc8484f53c6679b42">Released class PlayerCancelBreakingBlockAfterEvent from beta to v2.9.0</li>
+<li data-list-item-id="ee54c9a9729a054314839d72c9cb16b94">Released class PlayerCancelBreakingBlockAfterEventSignal from beta to v2.9.0</li>
+<li data-list-item-id="ec06f596b8a1d5741c089195c3b4511d8">Released interface PlayerBreakingBlockEventOptions from beta to v2.9.0</li>
+<li data-list-item-id="e75b08a8a20494182f54b3b4d2a669907">Renamed Dimension.findClosestBiome to Dimension.calculateClosestBiomeFromSeed and released from beta to scripts version 2.9.0</li>
+<li data-list-item-id="e2707e6bfa5bfd2c09ebb14d8147735f8">Released BiomeSearchOptions from beta to scripts version 2.9.0</li>
+<li data-list-item-id="e7001ec46f0b92511189fc4c260b89752">Fixed minecraft:hopper_minecart to fire EntityItemPickupAfterEvent and EntityItemPickupBeforeEvent for items above the cart.</li>
+<li data-list-item-id="e54382b3be55713960cbed3b79e610a24">Released LootItem.conditions in @minecraft/server v2.9.0 (moved from beta to stable)</li>
+</ul><h4 id="h_01KZ41YAC51HKKYGKMC4HTWV5Z">DDUI</h4><ul>
+<li data-list-item-id="e34fe6a1fbe00f47fe61b8936465ca582">Added image method onto CustomForm in @minecraft/server-ui to allow showing images on CustomForms.</li>
+<li data-list-item-id="ebfd7a21ab531d3c63c29f4d3eb7092f3">Fixed Images in CustomForms not being centered in the form</li>
+<li data-list-item-id="e686e58924f378df8366eb1a988eaa757">Added ImageOptions.onClick and ImageOptions.tooltip which allow for a callback on click of an image and a tooltip on images, for use with CustomForm.image</li>
+</ul><h4 id="h_01KZ41YAC6H9YK0FD5D4WT1YF2">Dimension</h4><ul><li data-list-item-id="ee113c2861db07825d9d26594ed340549">Significantly improved block search speed when using BlockVolume for 'fillBlocks' API.</li></ul><h3 id="h_01KZ41YAC6ZSPJF61WRJ3SDHQW">Blocks</h3><ul>
+<li data-list-item-id="eef269f33539f8123ef309ef5dd8843eb">Added "shelf" as an "item_display_transforms" offsets value inside geo.json<ul>
+<li data-list-item-id="eb8b86c857d6bac2ac8afed4b6afc7eca">This is to give the offsets when placed inside a Shelf Block</li>
+<li data-list-item-id="e342dfa9ffa3098ed4a20a1d302345ae5">Pre 1.26.40 blocks with a "fixed" value will have that value copied to "shelf"</li>
+<li data-list-item-id="e347f6e04a91980301b5478dc166f305a">New 1.26.40 blocks will be able to define "fixed" for Item Frame and "self" for Shelf Block</li>
+</ul>
+</li>
+<li data-list-item-id="eaf5233c68617df90466a1326e4b64aea">Fixed custom blocks with the 'minecraft:tick' component ticking more than expected when placed via a structure with saved tick data (<a href="https://bugs.mojang.com/browse/MCPE-236362">MCPE-236362</a>)</li>
+<li data-list-item-id="eba16f4f87b6445a47a584c2d130d88db">Released minecraft:multi_block trait. However, for the field "direction" horizontal directions will still require Upcoming Creator Features experiment</li>
+<li data-list-item-id="e141410434142992ed26b0826872f0e66">N-way rotation on geometry components no longer requires upcoming creator features experiment</li>
+<li data-list-item-id="e6e4c1c6837f842a49c7c37ae15b83966">minecraft:sixteen_way_rotation state on placement direction block trait no longer requires upcoming creator features experiment</li>
+<li data-list-item-id="e921e0404d471fe1dad1121c30c098fb3">Align brightness sampling strategies between custom and vanilla blocks (<a href="https://bugs.mojang.com/browse/MCPE-237493">MCPE-237493</a>)</li>
+<li data-list-item-id="e89401b185d5fcbf4e74f77ca09f64ef5">Jigsaw Block replacement will now log when an invalid final_state is encountered</li>
+<li data-list-item-id="e909e55f5fe535120d33c734c0c363628">Added new biome decoration feature "minecraft:multi_block_feature", which can be used exclusively to place blocks defined with the "minecraft:multi_block" trait</li>
+<li data-list-item-id="e514a244de84e6be8fc09a3d955dd966f">Released the minecraft:instrument_sound component from experimental.</li>
+</ul><h3 id="h_01KZ41YAC8K6C6GMYMSABPW8XF">Block Components</h3><ul><li data-list-item-id="edea320c99ff5332e7aca0f553c6b5623">Vanilla blocks defined with shapes in the shapes/ folder now use voxel-shape based culling without requiring the Voxel Shapes experiment. This will allow custom blocks using voxel-shapes to attempt to cull against any vanilla block with a voxel-shape</li></ul><h4 id="h_01KZ41YAC9K2GZCA0FQ4EBMN5R">Fences</h4><ul>
+<li data-list-item-id="e48e42c90db8816a51ce49b720b02ce73">Vanilla fence blocks now expose per-direction connection block states (minecraft:connection_north, minecraft:connection_east, minecraft:connection_south, minecraft:connection_west) reflecting which neighbors the fence connects to</li>
+<li data-list-item-id="e78310eeb19eb32b3377dbf5523ede3e6">In 1.26.40+ worlds, fence connection changes now send server-side block updates to adjacent blocks. Older worlds keep legacy behavior for compatibility.</li>
+</ul><h4 id="h_01KZ41YAC92AHA144P7ZB9E3S7">Stairs</h4><ul>
+<li data-list-item-id="e6c210f2232b3439a86c8fb3430610673">Vanilla stair blocks now expose a minecraft:corner block state (none, inner_left, inner_right, outer_left, outer_right) reflecting the corner shape formed with adjacent stairs</li>
+<li data-list-item-id="e99f6ede46c966dfc5f03336c8014002a">For new worlds (base game version 1.26.40 and later), stair corner-state changes now trigger neighbor block updates for parity with Java Edition; existing worlds keep the prior client-only update behavior</li>
+</ul><h3 id="h_01KZ41YACAKPTSH841BAJB86WS">Crafting</h3><ul><li data-list-item-id="e146d70424f6e8969dddb7983f3859bb5">"minecraft:recipe_smithing_transform" now accepts items tagged with "minecraft:transform_materials" in its "addition" field</li></ul><h3 id="h_01KZ41YACAG40Y1R59PD4MVPBH">Commands</h3><ul>
+<li data-list-item-id="ef6b2c8983379f10aae56d3315958fa3e">Allow using player name as target for commands (i.e. /tell) for non-operator players.</li>
+<li data-list-item-id="ec2e659be188bbb611661e53c95499852">Allow self selection expansion when using commands (i.e. /tell) for non-operator players.</li>
+<li data-list-item-id="e19d920267c12f3b4d6f2ddf62bc0404f">Fixed clone command cloning partial beds, both parts must be fully inside cloning volume</li>
+<li data-list-item-id="ea1be519b7867f41a83b81f91bdf46f53">Fixed the /fill command from improperly placing blocks defined with the minecraft:multi_block trait</li>
+</ul><h3 id="h_01KZ41YACB48G5HAT70XNQY1V6">Dedicated Server</h3><ul>
+<li data-list-item-id="efed9abed95242c65d5345e60cb640928">Fixed content-log-file-enabled option not creating log file when set to true (<a href="https://bugs.mojang.com/browse/BDS-23033">BDS-23033</a>)</li>
+<li data-list-item-id="e246ce2e6dee7d255ef3e457555ad9f88">Added CLI options to run the dedicated server in pack optimization mode, allowing creators to optimize packs for testing and distribution inside and outside Marketplace.</li>
+</ul><h3 id="h_01KZ41YACBC9GK7Q7SQFA0WA7G">Editor</h3><ul>
+<li data-list-item-id="ec00d578ee3f9defacfb8494ee87648cc">Builds no longer crash or incorrectly copies data out of the Shared 'minecraftWorlds' folder for worlds (with behavior / resource packs enabled) upon exiting the Edit Project screen using the Back / Resume buttons</li>
+<li data-list-item-id="eec5daf5054a044124513a81e11e07ec6">Fixed an issue where the mouse cursor preview volume vanishes after toggling Vibrant Visuals on/off</li>
+<li data-list-item-id="ee34c71cf51261d4d7b3a932c3d4431f2">Added real-time chunk sync to the Biome Data Assignment Tool</li>
+<li data-list-item-id="e665f099478d862537e55df4c782ee246">The Vibrant Visuals generate resource pack button now exports any edited configurations to a resource pack with a folder link provided</li>
+<li data-list-item-id="ee5e27086600099ac2ee55483329dab5a">Renamed "Brush Paint" to "Brush" in the Editor UI</li>
+<li data-list-item-id="e69a24422f5328c9027379d4162cfb6ca">Added glTF and GLB file format support to the Custom Mesh Tool.</li>
+<li data-list-item-id="ef10b52ccc14c1b4f787c54e822d297b4">The Dimensions dropdown menu now shows a checkmark next to the player's current dimension</li>
+<li data-list-item-id="eec200321dd236969a577e1ff39996d45">Added Structures to the View menu</li>
+<li data-list-item-id="e9ff1559d6bef1bf71f86dd10b5304866">Added Keyboard Settings to the File menu</li>
+<li data-list-item-id="e70afa4b530ab1989ed0cdac34cfada5f">Added Biome Data Assignment to the World menu</li>
+<li data-list-item-id="e1d4beb928832f84ad2c22618c1b03506">Added Dimensions Panel to the Dimensions submenu in the World menu</li>
+<li data-list-item-id="ece6902491e11fd1ba2181fb75103e2ec">Added a filterProfanity option to string property item so the editor's world export name field validates the input against a profanity filter, surfacing a warning modal and clearing the field when profanity is detected.</li>
+<li data-list-item-id="e666ea966d9eb4459b3c18fda8daee64d">Fixed issue that leaves the instance in the layout after baking, instead of removing it.</li>
+<li data-list-item-id="ea9bc8a12fe0364c911239b0717a9b141">Fixed a crash that occurred when removing structures from a layout template when a template was placed into the world</li>
+<li data-list-item-id="e3467c6ea6f1fd7cc90c979403d754b66">Updating a structure from clipboard now opens a confirmation dialog before overwriting, and the option is disabled when the clipboard has no content</li>
+<li data-list-item-id="ed33a5ef12e640906058ec946b4ec9556">Added pagination and selector menu support for tabs</li>
+<li data-list-item-id="ee7a6a86c3a6fdee5c5d2ca34be8d8908">Using mouse wheel scroll on tool rail, action bar items and floating window tabs will now toggle between pages</li>
+<li data-list-item-id="e2b2ea1443f9a02224de3d158eccfc660">Added scrolling support for the menu bar and context submenus when they extend beyond the window size</li>
+<li data-list-item-id="e0854db8e8b40c9c42be2f56ee991e841">Fixed the cursor indicator from hiding transparent and semi-transparent blocks (e.g., water, glass, ice) behind it, which also caused a missing block in the Paste Preview at the cursor position</li>
+<li data-list-item-id="e252c55dd35f1b511d9f69105f24f0d4f">Fixed a bug that caused gameplay hotbar to display in Editor tool mode</li>
+<li data-list-item-id="e954e1d7e220a4dcc4b156a66e90ac87b">Added a "Scale By" axis selector and a "Change Mesh" button to the Custom Mesh Tool, letting you size the mesh along its longest, width, height, or depth axis and swap in a different mesh file without leaving the tool.</li>
+<li data-list-item-id="e3db50e21d08a48a76aed4fdcbcf32cdb">The Custom Mesh Tool now keeps the imported mesh loaded after placing or cancelling a placement, so you can place the same mesh multiple times without re-importing. The mesh and preview stay ready until you press Cancel while idle or change the mesh.</li>
+<li data-list-item-id="e955be9574d95e56f9b357f393e882e46">Updated introduction floating window to be resizable</li>
+<li data-list-item-id="e4dc1b2a9b7a5b61b67707cd730c71be5">Fixed a bug where deleting a world template locally and entering Edit World for that world caused potential data loss</li>
+<li data-list-item-id="ef64f2ad6f774f1fa2b48e13e762deb87">Gizmo now maintains consistent on-screen size during zoom and improves interaction by hiding overlapping unselected gizmos</li>
+<li data-list-item-id="e08f2a461fd9c17aee6ea744841f34408">Added a timeline player component with a scrubbable timeline bar and playback controls for previewing time-based sequences</li>
+<li data-list-item-id="e39a7b24cec39a094cb6938c739bf405d">TransactionManager functions undo and redo will now be processed over time</li>
+<li data-list-item-id="ee6b2cf4d47b1184e9af4586c63efe58c">Fixed a bug where an error appears within Vibrant Visuals Settings when selecting a config file that contains an uppercase letter ("Failed to transfer data from client - Could not retrieve setting for identifier ``")</li>
+<li data-list-item-id="e8ffbcef152b9780f7e7cfa8f44669981">Fixed a bug that caused scripted modal dialogs to not be centered by default</li>
+<li data-list-item-id="e0477951d2154acc31724c8626364e41e">Fixed a bug that caused Block Inspector tool to throw an error when selecting a block</li>
+<li data-list-item-id="e05aebc6448ab55e86ac3965aac5ebd4b">Sulfur Spring minecraft:structure_template_feature definitions now reference their structure templates with the minecraft: namespace (<a href="https://bugs.mojang.com/browse/MCPE-237893">MCPE-237893</a>)</li>
+<li data-list-item-id="e23a152a4981920bc48e2bd82b8e30aa8">Fixed a bug where copying and pasting a double chest with the Paste Preview or Structure tool pasted it as two separate single chests instead of a single double chest</li>
+<li data-list-item-id="ef8c5d162e3373f4b0da5409a7c33bc8e">The Block Inspector tool now highlights the currently selected block with a bounding box, giving a clear visual indicator of which block is being inspected</li>
+<li data-list-item-id="ea062a2d51506b736762101e6768abfd3">Fixed the Primitives Tool preview and placement to follow the Fixed Distance cursor projection</li>
+<li data-list-item-id="eb0e7b0207307a931eb9fceb5d402f161">The Flood Tool no longer errors when pressing Ctrl+D to remove a preview that has already been removed</li>
+<li data-list-item-id="ee22c433f101579b30599cac8ec5d7b3a">Editor property pane items no longer display an empty tooltip when there is no tooltip text to show, such as the Flood Tool progress bar</li>
+<li data-list-item-id="ee2b26ebca600a0888e9f98ef11384e36">The Dimensions tool now returns the player to their last-known position in the target dimension, or the origin on first visit</li>
+<li data-list-item-id="efb98b0668df38680ceabbab2340d94e3">The Farm Generator tool now offers Pale Oak, Dark Oak, Nether Brick, and Mangrove fence options</li>
+<li data-list-item-id="e773524c1a3c71ab5555a24d52dfaf6a3">Fixed a bug in the Biome Data Assignment tool where the Allow biome tag list was matched with a logical AND, so only biomes containing every allowed tag were eligible; allowed tags are now matched with a logical OR, so a biome is eligible if it has any of the allowed tags</li>
+<li data-list-item-id="e6d8cbc516f128959cb73961a938af85d">Fixed a bug in the Vibrant Visuals color settings where dragging a timeline playhead no longer scrubbed the viewport time, so color and value keyframes could not be previewed across the day/night cycle</li>
+<li data-list-item-id="ebfffdbdc7596a2f1ad394287d9b6549b">Fixed a bug that caused the sliders connected to any Vibrant Visuals "Enabled" checkbox to be manipulated with the checkbox toggled off</li>
+<li data-list-item-id="e9b36260bfc35269b136e9a9a938712ff">Fixed a bug that caused incorrect theme color to display for disabled text field</li>
+<li data-list-item-id="e172d6fa38d351d475ec27495bb41ccb0">Added a Timeline panel to the Cinematic Tool for visualizing and editing keyframes along the camera path</li>
+<li data-list-item-id="e1b1df75034a220f399e81ea51da59434">Renamed "Control Points" to "Keyframes" throughout the Cinematic Tool to align with standard animation terminology</li>
+<li data-list-item-id="ef9a7ba55fe0b3e807a270c754744f277">Removed all transaction recording and management functionality from the TransactionManager API and moved it to the PendingTransaction object. Transactions are now created through createPendingTransaction function, while staged changes are finalized using the submit and discard methods</li>
+<li data-list-item-id="e764148dc5a1ddd045691c923180185d1">Added pending transaction support for ClipboardItem.writeToWorld and BrushShapeManager APIs</li>
+<li data-list-item-id="eb6abfa4b56518c76d1fffd89c854e29d">Added a drag handle to the cinematics timeline so the timeline duration can be adjusted directly in the editor</li>
+<li data-list-item-id="e3ca8db2dee89cdc47dea23ae4a84f4c4">Fixed a bug that caused placeholder string in text field to be incorrectly styled</li>
+<li data-list-item-id="eda683814d0cf4e815cd4ccfad58988f1">The Navigation panel's minimap now uses the new minimap control<ul>
+<li data-list-item-id="edd8ff4981bd2970e9db2f4569b6936aa">World locations are now stored per-dimension and shared across all clients</li>
+<li data-list-item-id="ed6a38606224a4853c2bdce41c82aaeff">Lowered the Nether's minimap scan Y-level so the map skips the bedrock ceiling</li>
+</ul>
+</li>
+<li data-list-item-id="ed500f5c7f27e548c0fa525d3ddc89945">Removed the "X" button from progress windows for the Custom Mesh, Primitive, and Flood tools</li>
+<li data-list-item-id="e71b805a8d8167276c284b3ceca11e95f">Fixed a bug that appears in Layout Template Manager during 'Copy Template' operation when copying a template with structures. The template is copied along with name and display name. The fix is that the name and display name metadata are set from the caller.</li>
+<li data-list-item-id="e96259e0f6c3689465c5e06be8b8d0a15">Fixed a bug where the custom cursor does not change from wait/load icon after canceling the flood operation</li>
+<li data-list-item-id="e56958e3fed887aad281ee191acec9c55">Fixed a bug that caused Collection Tree UI element width to be incorrect</li>
+<li data-list-item-id="eaaab534bd7267d51c14706d0a86f8b82">Fixed incorrect example json for Height Difference Filter documentation</li>
+</ul><h3 id="h_01KZ41YACPT60KFP2WATXKYDF8">Entity Components</h3><ul>
+<li data-list-item-id="e91c24e6cceb5d895ee3a0e8c646895c1">Added a new require_collision_overlap boolean field to minecraft:pushable_by_entity's presets:<ul>
+<li data-list-item-id="e7720f8e22f89436b1ccbf88499e6e485">Determines whether the collision boxes of two entities must overlap for pushing to occur</li>
+<li data-list-item-id="e6308c0c65113c57aa5b5cc96d315a1e1">For format versions 1.26.40 and higher, this field defaults to true</li>
+<li data-list-item-id="ea841db22d9ca48f56b011031a0d81337">For format versions below 1.26.40, this field defaults to false</li>
+</ul>
+</li>
+<li data-list-item-id="e83f2c486e5d87a3f37f222933a1f693a">Made the following changes to the minecraft:apply_knockback_rules component:<ul>
+<li data-list-item-id="e85aee4c43e14e798903229e793ec9e83">Renamed scale_previous_velocity to slowdown_scale</li>
+<li data-list-item-id="e9a3534e854a0497d02ebc62e5a956b05">horizontal_power is no longer scaled by 0.4 internally<ul><li data-list-item-id="e41b1f2039653fd59fc9553133af9b48b">Similar values for horizontal_power and vertical_power now produce similar knockback on both axes</li></ul>
+</li>
+<li data-list-item-id="e5dff3eed06ef5341f58bb4156a30b354">Deprecated the following fields:<ul>
+<li data-list-item-id="eafbefd0d382d55f15c08f5f3e9ec1382">horizontal_hit_angle_scale</li>
+<li data-list-item-id="e843558f2e9c2f0552da6d7dfa401da22">vertical_hit_angle_scale</li>
+<li data-list-item-id="e37d2819bc2cac5f88fe1d17b1406a8ec">vertical_position_angle_scale</li>
+</ul>
+</li>
+<li data-list-item-id="e2d97cef710bc57164080a40b042c8a8b">Added a new field, knockback_mode, which provides more intuitive control over how knockback is applied:<ul>
+<li data-list-item-id="e7e775ba824f49a73e4790eb0a46654fc">relative_horizontal (default): Applies knockback along the horizontal direction from attacker to target</li>
+<li data-list-item-id="e8d21f3b29161f5e9982e1b79fbf4efe6">hit_direction: Applies knockback based on the hit direction and point of impact (for example, hits from below push upward, and hits on the left side push to the right)</li>
+</ul>
+</li>
+<li data-list-item-id="e9ec2b55f7b2237241fea1f36627152b6">The component is no longer in Beta</li>
+</ul>
+</li>
+<li data-list-item-id="ecf939536990d45044c2310223217f9d0">Made the following changes to the impact_damage on_hit subcomponent of minecraft:projectile:<ul>
+<li data-list-item-id="ea9564852ebef365bd07ab47ce185fd11">Added a ceil_pre_critical_damage boolean field that rounds the projectile's damage up to the next integer before the critical hit multiplier is applied</li>
+<li data-list-item-id="e872dfe31d66f7cbb11d3d0a4bb67739e">power_multiplier is now applied regardless of the difficulty_randomization mode, so it can be used on its own to scale damage by the projectile's velocity<ul>
+<li data-list-item-id="e8c0585c757d5c5af352207fbb661f091">The resulting value is added to damage to define the projectile's base damage</li>
+<li data-list-item-id="e5362fd71dd78e45f59a3fd579840948f">Its default value changed from 2 to 0 so that prior content remains unchanged when neither field is specified</li>
+</ul>
+</li>
+<li data-list-item-id="e71919b456b2144bcc4ab17eef594f28d">Replaced the semi_random_diff_damage boolean field with difficulty_randomization, which controls how the world difficulty contributes to the final damage:<ul>
+<li data-list-item-id="e2257fab67f2ad697250edcb48639f32a">none: difficulty is ignored (default)</li>
+<li data-list-item-id="e452e8bea13ac556d6e2c61785e4d2ac9">additive: a difficulty-driven term is added to the base damage (matches the previous behavior when semi_random_diff_damage was true)</li>
+<li data-list-item-id="eb52a53c479278e86f5283678ca196955">multiplicative: a difficulty-driven term is added to power_multiplier before it scales by the projectile's velocity</li>
+</ul>
+</li>
+<li data-list-item-id="ec7dd21b8dcffca750b500968ca4a5381">Content authored against earlier format versions is automatically upgraded when loaded in 1.26.40 or later to preserve existing behavior2</li>
+</ul>
+</li>
+<li data-list-item-id="ea22be6821dc7055afa76712739365beb">Added the minecraft:not_pickable_from_inside entity component<ul><li data-list-item-id="e520ab6ab2b63af568573d05d96bd7c2b">When set, the entity cannot be targeted by a cursor hit-test while the picker's point of view lies inside the entity's collision box</li></ul>
+</li>
+<li data-list-item-id="e031248227f77720be7ef8e359a1947f9">Made the should_bounce boolean field of the minecraft:projectile component into an enum:<ul>
+<li data-list-item-id="ef45bb027087efa5c91a9951bd925623f">no: the projectile never bounces (default)</li>
+<li data-list-item-id="e2bb95e4ca0070819c80440ea2d3f737d">if_invulnerable: the projectile bounces only when the target is invulnerable to the damage source (e.g. creative mode, shield blocking)</li>
+<li data-list-item-id="e4b6ebcd73a5c2b7ed85376dcc0fb8a53">if_no_damage_dealt: the projectile bounces whenever no damage was dealt, regardless of the reason (invulnerability, damage sensor, invulnerability frames)</li>
+<li data-list-item-id="ed969472ba636acf01a79c7e716ec8370">Content authored against earlier format versions is automatically upgraded when loaded in 1.26.40 or later: true becomes if_invulnerable and false becomes no</li>
+</ul>
+</li>
+</ul><h3 id="h_01KZ41YACVH6BGD9CR49STZH1H">Features</h3><ul><li data-list-item-id="e85fcce286bb6b5f3269a36932f364d62">Added content error when loading features with identifiers that already exist within the same behavior pack</li></ul><h3 id="h_01KZ41YACV5WV2H0YQ7SRM9V01">General</h3><ul>
+<li data-list-item-id="e7238b277f1d32983f14ab28656e846f2">Fixed invulnerability bypass when changing damage of entity hurt before event during lethal damage</li>
+<li data-list-item-id="ead270cffba4e46b002753e8f8bddddac">Fixed invulnerability timer floating-point cycling issue for very small damage diffs</li>
+</ul><h3 id="h_01KZ41YACW9XMCMMZ975744Y93">Graphical</h3><ul>
+<li data-list-item-id="ed0c95037f13e7b5dd73440c3cb3ee53d">Optimized FrameGraph topological sorting algorithm by replacing DFS-based approach with Kahn's algorithm for improved performance and clarity</li>
+<li data-list-item-id="ef507417ccbf79d4dbc6e6d5b7d23e531">Tightened the anti-x-ray trigger box to avoid false-positive cases when riding a mob</li>
+<li data-list-item-id="e2341921d176dcddacc43430d8af26de7">Fixed custom blocks rendering a stray solid face that could bleed through textures when a model face was hidden by setting one of its UV size dimensions to zero</li>
+<li data-list-item-id="e4fcd5d8e36f6f4ebd8ea68d7335b7df7">Fixed texture bleeding on custom blocks using automatic block face UV assignment with undersized textures</li>
+<li data-list-item-id="ed27536ed3ad7fdf94e94b3af2f7951bf">The MERS textures for following baby mobs and Rabbits are now visible<ul>
+<li data-list-item-id="ecc93a3ca552d1b88319bf13337675dd0">Baby Humanoid Chainmail Armor</li>
+<li data-list-item-id="ef5a28841adfcb59ae6b0f2042bd8536c">Baby Dolphin</li>
+<li data-list-item-id="ed06d76c213458efbb6286eb449ef40b5">Baby Fox</li>
+<li data-list-item-id="e53693ad64527b4d829a744b1e527aafa">Baby Goat</li>
+<li data-list-item-id="ecce7973dbb31bc677ae3ad18aaa113f0">Baby Hoglin</li>
+<li data-list-item-id="e78ca7796f8dd4ba739fe35e5758d81dc">Baby Panda</li>
+<li data-list-item-id="e391edbb801100d02c534c3354d3426db">Baby Warm Pig</li>
+<li data-list-item-id="e460ff821c6aff25e8e9a09ecaa80dc35">Baby Zombie Piglin</li>
+<li data-list-item-id="ea142965c65fc85e34aedd881b43e5ea2">Rabbits</li>
+<li data-list-item-id="e75fd61701493ad7c1137208e0fbd1964">Snifflet</li>
+</ul>
+</li>
+<li data-list-item-id="ec75f6f354bdf164b2724a23ac0edc828">The tamed baby Wolf's collar now has a proper MERS texture</li>
+</ul><h3 id="h_01KZ41YACXBS15Q6941X3F2TBE">Items</h3><ul>
+<li data-list-item-id="ef5730204a508f5cefa2bed9fad086cce">Fixed minecraft:shooter component not being able to shoot if no ammunition was defined</li>
+<li data-list-item-id="e0c1bf905814f146cb7dfe985ffbd415e">Items declared with a format_version of 1.26.30 or higher now require at least one entry under minecraft:item.components. Previously such items would silently fall back to legacy item parsing; they now fail to register with a content error.</li>
+<li data-list-item-id="e9cd4cb894cb85afe7e67634f416f2615">Custom item definitions in resource packs now reliably override their Vanilla counterparts in two previously-broken cases:<ul>
+<li data-list-item-id="ea79262a1fed18ade8efd7346f129f641">A custom definition using an older format_version will now be applied on top of a Vanilla item that ships with format_version 1.16+ (previously the custom data was silently dropped). In Vanilla this only affects minecraft:apple and minecraft:breeze_rod.</li>
+<li data-list-item-id="e0e1ba4b6fba59cfa1002bc38d066bd8a">A custom definition targeting a Vanilla item by its flattened identifier (e.g. minecraft:enchanted_golden_apple) now correctly applies even when Vanilla defines the item under its legacy identifier (e.g. minecraft:appleEnchanted). (<a href="https://bugs.mojang.com/browse/MCPE-185730">MCPE-185730</a>)</li>
+</ul>
+</li>
+</ul><h3 id="h_01KZ41YACZF5DE2WMG4APFG4E2">Item Components</h3><ul><li data-list-item-id="e2089be4031671abae7e68757aee1006a">Updated item schema validation so minecraft:item.components now requires at least one component entry for item documents in v1_26_30 and beta</li></ul><h3 id="h_01KZ41YACZS8A8GB4839ZPH0AE">JSON Schema</h3><ul>
+<li data-list-item-id="ec37e28f31c8c427c1d4dcfd39f136267">Updated the generated Minecraft JSON Schema files to use a more granular schema layout instead of producing one self-contained schema file per registered type. This reduces duplicated schema content and makes the generated schemas easier to consume with external tools.</li>
+<li data-list-item-id="ec27254f170d7762571c77f1bc89d1c38">Added binary-protocol metadata to generated SharedTypes JSON Schemas, including ordinal index, control value type, underlying type, and serialization options. This gives tools more information about the binary layout of the objects described by the JSON Schemas.</li>
+</ul><h3 id="h_01KZ41YACZMZW9SWBGQTM2PG7E">Networking</h3><ul>
+<li data-list-item-id="e08680736da9939286f0259e8ab0aa4a4">When connecting to a dedicated server, the client probes the server for NetherNet support with a 3 second timeout. WinHTTP does not honor this timeout in the following situation:<ul>
+<li data-list-item-id="e79f5d1ce6d1e0ace7fd0bfbf42089189">The client connects to the server by URL instead of IP.</li>
+<li data-list-item-id="e772787733a14809a27d32a23d7fd25c9">The server hostname's DNS record contains multiple IP addresses.</li>
+<li data-list-item-id="ec5ab9f30bd611e9b9705321376edf6a4">The server is behind a firewall that drops the client's probe TCP packets instead of responding with an RST.</li>
+</ul>
+</li>
+<li data-list-item-id="ed2a1144041509d5f6d571337cfeee3fa">Instead of a 3 second timeout for the entire connection attempt, WinHTTP enforces a (3 seconds) * (number of IP addresses in DNS record) timeout.</li>
+<li data-list-item-id="e50cb603871c8b521409282762b9b4327">This bug has been fixed by enforcing an overall 3 second timeout.</li>
+</ul><h3 id="h_01KZ41YAD0BK4BBYM54YRTG7FK">Particles</h3><ul><li data-list-item-id="e81e402af0ceb1e74960e7125aa97a35c">Particles using textures from the font folder no longer produces erroneous content log error (<a href="https://bugs.mojang.com/browse/MCPE-238790">MCPE-238790</a>)</li></ul><h3 id="h_01KZ41YAD059TQV8QTZVTXBW1K">Sounds</h3><ul><li data-list-item-id="ed1c86139874a7b036b19ec5edd8dce40">Fixed the destroy block sound position to be at the center of the block instead of at the corner (<a href="https://bugs.mojang.com/browse/MCPE-60799">MCPE-60799</a>)</li></ul><h3 id="h_01KZ41YAD0EV9E7NENPHC84V7M">User Interface</h3><ul>
+<li data-list-item-id="ea8774508c8a8e59991ef378a61c3c293">Refactor of ProfileSystem subscriptions for a speculative fix for profile fetches resulting in a crash due to stale reference</li>
+<li data-list-item-id="e6607e55aed87681859b3a86f63b01204">Small geometries using the "item_display_transforms" -&gt; "gui" -&gt; "fit_to_frame": false option will now be properly centered in format_version 1.21.130 and above (<a href="https://bugs.mojang.com/browse/MCPE-234752">MCPE-234752</a>)</li>
+</ul>
+<hr>
+<h2 id="h_01KZ41YAD0Q9RGC59EAX9WK3Z9">Experimental Technical Updates</h2><h3 id="h_01KZ41YAD0H08FG5S9MERFSFGS">Add-Ons</h3><ul><li data-list-item-id="e06b6726fa5885c72c213c7c851c9ce64">Improved the experimental JSON document upgrader: configuration parsing errors are now surfaced through the upgrader's error logging, errors that abort an upgrade are recorded in the error log, and files found outside of a pack are ignored instead of failing the run</li></ul><h3 id="h_01KZ41YAD0QPFEBPGR5D5KDMQN">API</h3><ul>
+<li data-list-item-id="eb5b814e01b2c44ce467350a9e9f1521b">Added a new loot function CarryOverBlockEntityDataFunction with a single boolean field "dynamic_properties" behind beta</li>
+<li data-list-item-id="e28c4eed8412f533292420d29d5a0dd6c">Added ItemBlockDynamicPropertiesComponent item component behind beta<ul>
+<li data-list-item-id="eb51ae48d1825f5c56142a99976398748">It may be retrieved on an item that resulted from a carry_over_block_entity_data loot function</li>
+<li data-list-item-id="e62158a985be54ba1cf1b88cd52684c24">It has two methods, get and totalByteCount which work like their block component counterparts</li>
+</ul>
+</li>
+<li data-list-item-id="edfc12ae37abd1bc9fe6094828e7b2bcf">Added EntityStartSneakingAfterEvent and EntityStartSneakingAfterEventSignal to beta.</li>
+<li data-list-item-id="e61501bd68aea1fc7f89bb09829ce7e90">Added EntityStopSneakingAfterEvent and EntityStopSneakingAfterEventSignal to beta.</li>
+<li data-list-item-id="ea48bcd3949a759bfc39a4d4c4d016361">Added clear() to AllowList in @minecraft/server-admin in beta</li>
+<li data-list-item-id="e2eb342d74e761c7fb722cd795e4cb0fe">Added setVolume, setPitch, fade, and seekTo methods to SoundInstance in beta</li>
+<li data-list-item-id="ec7ba606ea4dc62acc71db7a93ef9d44f">Added loopCount option to PlayerSoundOptions and WorldSoundOptions in beta</li>
+<li data-list-item-id="e02aa757021953df51d82a7225de19df0">Infinitely-looping sounds (loopCount: -1) stop automatically when the last SoundInstance reference is dropped; retain the handle to keep the sound playing</li>
+<li data-list-item-id="e012f25c4986f345a0faba4c2300c8bb9">Added enum CameraShakeType to beta</li>
+<li data-list-item-id="e5d4e1b54de98e75958f1e5a73e3176d1">Added interface CameraShakeOptions to beta</li>
+<li data-list-item-id="e1fd4f7f2f056ea57a581c23049a654cf">Added function Camera.addShake to beta</li>
+<li data-list-item-id="e3866d734860027eb9985a92395ed72bc">Added function Camera.stopShaking to beta</li>
+<li data-list-item-id="e88de4e76778636bee680feb44420bb5f">Added class EntityTamedAfterEvent to beta</li>
+<li data-list-item-id="eb1d9b984f46adfedfac53f6f6ca76444">Added class EntityTamedAfterEventSignal to beta</li>
+<li data-list-item-id="e5a4262bcb2ff6194d365cf357b3ea0df">Added interface EntityTamedEventFilter to beta</li>
+<li data-list-item-id="e78a6b80fcf3b4c8ccb7a8f2a08b6637a">Added property WorldAfterEvents.entityTamed to beta</li>
+<li data-list-item-id="e45556ae053666b6e59a35583a637a28a">Added interface BlockQueryOptions to beta</li>
+<li data-list-item-id="e479f19733f8c4ee5d96fe06678b40151">Changed Dimension.getBlocks in beta to accept BlockQueryOptions instead of BlockFilter which adds support for closest, farthest, and location options</li>
+<li data-list-item-id="e091cab2b2126b52921349bc5647fcd54">SoundInstance in beta now exposes a soundEventId property that reports the sound event the instance was started with</li>
+<li data-list-item-id="ebf107fa6288a5ed2dfcf1b04c849716a">SoundInstance in beta now exposes a recipient property that returns the Player the sound was played for, or undefined for broadcast sounds</li>
+<li data-list-item-id="e6458f373b641aedfae0a2a497fbc5c33">SoundInstance in beta now exposes a durationInfo property that returns a SoundDurationInfo when the underlying sound definition includes duration information, otherwise undefined</li>
+<li data-list-item-id="eeb1d9b4571948b349e59813213538567">Added SoundDurationInfo in beta with a duration property, an isActive property, and a getPlaybackPosition() getter that returns the elapsed playback time in seconds</li>
+<li data-list-item-id="e335bbad19be7d34b1960dd038718d554">SoundInstance now exposes an id property that returns a unique identifier for the instance</li>
+<li data-list-item-id="ef2574b2bfc74b020cb3a30bd287689ff">WorldAfterEvents in beta now exposes a soundCompleted signal with a soundInstanceId property that matches the id of the SoundInstance that completed that fires when a tracked sound's declared duration elapses</li>
+<li data-list-item-id="e05b8e9e5c6e74c1e3e30145f50f98690">Added API for minecraft:instrument_sound component<ul>
+<li data-list-item-id="e040c2658160d3b029a556f96feea98d4">it has a getInstrumentName function to get the assigned instrument given a valid facing Direction</li>
+<li data-list-item-id="e8c0cb9a2ed40447e7c4ad531318ecf91">it has a playInstrumentSound function to play the instrument sound assinged to a given valid facing Direction</li>
+<li data-list-item-id="ea0aff400186796bb5ef9372d59724571">the component can be obtained from any custom or vanilla block; if a block does not have the component explicitly defined, then a component with the default sounds will be returned</li>
+</ul>
+</li>
+<li data-list-item-id="e168b1c0f3229caaf12718a81ba63241d">Fixed PlayerStartBreakingBlock and PlayerCancelBreakingBlock from firing when a block can't be broken by item in creative</li>
+<li data-list-item-id="e741395b5557ba9b0967071345413e377">Changed property name playfabId on Player class to persistentId in @minecraft/server in beta.</li>
+<li data-list-item-id="eefd76f849850afbc94c9b3c32b956835">Added property splitScreenSlot to @minecraft/server-admin's AsyncPlayerJoinBeforeEvent in beta</li>
+<li data-list-item-id="e592ff65b159f805d0907a5becb9c9979">Added enum PlayerScriptScreenSlot to @minecraft/server in 2.9.0</li>
+<li data-list-item-id="ed211d39e5cfdb2b5032d2ceb0d987685">Added method getSplitScreenSlot to @minecraft/server's Player in beta</li>
+<li data-list-item-id="e9fcb4575344901b85831f19d6d97c764">Changed beta method getPing of @minecraft/server's Player to have restricted execution privilege</li>
+<li data-list-item-id="ea55a5ba5b010efa800331b2a9df441b6">Added BlockVolumeBase.getClosest to beta. Returns the closest N block positions in a volume to a given location sorted by distance</li>
+<li data-list-item-id="e888665f8ea6fa7540f3048db9a1cedab">Added BlockVolumeBase.getFarthest to beta. Returns the farthest N block positions in a volume from a given location sorted by distance</li>
+<li data-list-item-id="eab8c77a3515881830375352163ce8aed">Added class EntityTamedBeforeEvent to beta</li>
+<li data-list-item-id="ec79aba2885342ffb108477ba238d4ddf">Added class EntityTamedBeforeEventSignal to beta</li>
+<li data-list-item-id="e94020465e38d385005f0646c19785d5b">Added property WorldBeforeEvents.entityTamed to beta</li>
+<li data-list-item-id="e7c2d153991718f12d9ac3a283283c685">Added SoundDefinition class to beta with read-only soundEventId and durationInfo properties</li>
+<li data-list-item-id="e7f24b1e03aedeacd6c4c7ce90eba2a0f">Added SoundDefinitionDurationInfo interface to beta with a duration property</li>
+<li data-list-item-id="e08912f592be787ebead1e31adc92f60b">Added SoundDefinitionFilter interface to beta with optional minDuration and maxDuration properties</li>
+<li data-list-item-id="e3f2478a39e8e1b618c1ef1fb27a3f635">Added SoundDefinitionRegistry class to beta with a getDefinitions method that returns the loaded sound definitions, optionally narrowed by a filter</li>
+<li data-list-item-id="e4d1aeeb12bc22e4cdad2a47d8529cdd2">Added World.soundDefinitionRegistry property to beta that provides read-only access to the sound definitions loaded for the world</li>
+<li data-list-item-id="ed175bea27202a570777e6cd5eb8092f9">Player.playSound now accepts a SoundDefinition in addition to a sound id string in beta</li>
+<li data-list-item-id="e1ba02e584953f18b06bda8c5af2dfe5a">Added SoundDefinition class to beta with read-only soundEventId and durationInfo properties</li>
+<li data-list-item-id="e25162f7a661a1bcc438345390b73fd17">Added SoundDefinitionDurationInfo interface to beta with a duration property</li>
+<li data-list-item-id="e6836bf742208f8878b61b525724050b7">Added SoundDefinitionFilter interface to beta with optional minDuration and maxDuration properties</li>
+<li data-list-item-id="e5c9b361b1e65a2c452af5b4948bd1be4">Added SoundDefinitionRegistry class to beta with a getDefinitions method that returns the loaded sound definitions, optionally narrowed by a filter</li>
+<li data-list-item-id="eca9701c157d9fef0e0f50dda955d1398">Added World.soundDefinitionRegistry property to beta that provides read-only access to the sound definitions loaded for the world</li>
+<li data-list-item-id="e3b115693d5438c29b4b117c565bb382d">Player.playSound now accepts a SoundDefinition in addition to a sound id string in beta</li>
+<li data-list-item-id="e281c2a371b30c1da3c5d7e4196f3d2b1">The minecraft:server_sound_definitions payload in sounds/sound_definitions.json now accepts an optional music_info block on each definition with optional genres (array of strings), moods (array of strings), artist (string), and title (string) fields that describe the music content of the sound</li>
+<li data-list-item-id="e0d7ccae570115da9a47b44e2fbf1b16d">The minecraft:server_sound_definitions payload now accepts an optional tags map on each definition where each entry is a tag name mapped to either a single string value or an array of string values, letting behavior packs attach arbitrary metadata to a server sound definition</li>
+</ul><pre class="language-auto">},
+            "music_info": {
+                "genres": ["electronic", "ambient"],
+                "moods": ["calm"],
+                "artist": "Some Artist",
+                "title": "My Cool Song"
+            },
+            "tags": {
+                "category": "background",
+                "regions": ["overworld", "nether"]
+</pre><ul>
+<li data-list-item-id="ef1d7f6acc7a544abf809371a6a730861">Added new beta interface SoundDefinitionMusicInfo with optional genres, moods, artist, and title properties describing the music content of a sound definition</li>
+<li data-list-item-id="e40346c1d79879652e10b5decbc73ebc3">Added new optional beta property SoundDefinition.musicInfo exposing the music metadata declared on a server sound definition</li>
+<li data-list-item-id="ecb89927ef1a30662367d73b671d10d86">Added new optional beta property SoundDefinition.tags exposing the arbitrary tag metadata declared on a server sound definition</li>
+<li data-list-item-id="ef524a8d8e6363345b140adf5a5270dda">Added new optional beta properties on SoundDefinitionFilter for filtering by music metadata and tags: genres, moods, artists, titles, and tags. All comparisons are case-insensitive. An omitted field does not filter; a non-empty array matches when any provided value overlaps the definition's values</li>
+<li data-list-item-id="efd56ab8fbbaf5a3cce9f4cd8e01858c4">Added getShapes method on PrimitiveShapesManager.</li>
+<li data-list-item-id="eda147e34d3c0adce31af431635ff35d6">Added interface PrimitiveShapeQueryOptions for use with getShapes.</li>
+<li data-list-item-id="ea86078e76f0b355dd07ef12cda475c4b">Added AllowListEntry to @minecraft/server-admin with optional name and xuid properties in beta</li>
+<li data-list-item-id="e0ac09729854f9b8b3ff7abf2ecd27e78">AllowList changes in @minecraft/server-admin all in beta<ul>
+<li data-list-item-id="eaacdd3fffdc898389bd7d43859eca6df">Added entries: AllowListEntry[] property</li>
+<li data-list-item-id="ecb0cc2f49fe1e86ca46822070845ecaf">Changed add() to accept either a Player or AllowListEntry and removed accepting string as parameter. Adds InvalidArgumentError to this function when AllowListEntry has both name and xuid properties set to undefined.</li>
+<li data-list-item-id="e1536c7ba9ebd5e337fb2e2514bb45479">Changed remove() to accept either a Player or AllowListEntry and removed accepting string as parameter. Adds InvalidArgumentError to this function when AllowListEntry has both name and xuid properties set to undefined.</li>
+<li data-list-item-id="ec08165daa04c21eef53eefc42ee3f060">Changed contains() to accept either a Player or AllowListEntry and removed accepting string as parameter. Adds InvalidArgumentError to this function when AllowListEntry has both name and xuid properties set to undefined.</li>
+</ul>
+</li>
+<li data-list-item-id="e0f00c1e1b6772cf549300cde3d44bf6b">Added new beta enum CloneMode with values Copy, ForceCopy, and Move that specifies how blocks are cloned between regions</li>
+</ul><h4 id="h_01KZ41YADKE7DPF3SN3GYNKK35">Dimension</h4><ul><li data-list-item-id="ec910f02c3e0b8fbbc4e939d7704430e1">Added cloneBlocks method to beta that clones a region of blocks from one area of the dimension to another, with support for clone modes and an optional block filter</li></ul><h4 id="h_01KZ41YADK260X3NCQRW5D6V3F">SoundDurationInfo</h4><ul>
+<li data-list-item-id="e373242315d26b55df21e3fccbc7d9bc9">The playback position now reflects calls to SoundInstance.seekTo</li>
+<li data-list-item-id="ef741b7682fa7ba78093a8f8873531f2e">While a sound is paused via SoundInstance.pause, the playback position no longer advances; SoundInstance.resume continues from where it was paused</li>
+</ul><h3 id="h_01KZ41YADMHP9YQZQB63ENWKAP">Blocks</h3><ul>
+<li data-list-item-id="e753c28fabaf668d25b02e9b02a177950">When applying a "minecraft:sixteen_way_rotation" value via console command, autocomplete suggestions will now correctly show numbers 0-15. Sixteen-way placement direction block trait now applies its rotation with the same orientation as existing Cardinal Direction and Facing Direction traits.</li>
+<li data-list-item-id="e189f1fe4d543a0e51e73e1be2f2bdaf0">Added some trait restrictions for blocks with the minecraft:multi_block trait<ul>
+<li data-list-item-id="ed2eb54b7fe67fe0ac9669947d6fe55db">Cannot also define the minecraft:connection trait</li>
+<li data-list-item-id="e3571d4ce2d5edaba52ae05400cfce5d4">Cannot also define the minecraft:placement_position trait</li>
+<li data-list-item-id="e38f02696a78de28207d66d24485b6d94">If the minecraft:placement_direction is defined, only the minecraft:cardinal_direction state is allowed to be enabled</li>
+<li data-list-item-id="e06ed2f1084558e41651fd65ab0cbdbf6">The component minecraft:geometry cannot define n_way_visual_rotation for multi-blocks</li>
+<li data-list-item-id="e9351c2bf2a87c39849feb2c5fee5c132">Cannot also define the minecraft:block_entity component</li>
+</ul>
+</li>
+<li data-list-item-id="e00b4982070d18258e9405ea9e6cd0482">Each pack now has its own 1KBytes block dynamic properties limit instead of being global<ul><li data-list-item-id="eab257cc91d0ac83fa041446b480bdf6c">Storage structure was updated, your saved properties will be lost</li></ul>
+</li>
+<li data-list-item-id="e08eda45454a05f13d1fdfc9c4ca53fe0">Block-entity's dynamic-properties are now serialized in a readable NBT format, similar to their item-stack and entity counterparts</li>
+<li data-list-item-id="ece3546858f41becbe9b78a10874c2694">Block-entity's dynamic-properties stored on an item-stack can now be modified through the new set method</li>
+<li data-list-item-id="e357e4145ea2fe35b6ee7e8bb4df57d85">Block dynamic properties are now bucketed by manifest-UUID rather than module-UUID</li>
+<li data-list-item-id="e4767e69dd0974b1e8d3904bd6991362c">Added support for y_rotation_offset when using the minecraft:sixteen_way_rotation placement direction block trait.</li>
+<li data-list-item-id="ecd5dbd6359097193313ef426b5f1612c">Added horizontal "direction" support for the minecraft:multi_block trait. These new directions "north", "south", "west", "east" still require Upcoming Creator Features experiment to be enabled. When placing horizontal multi-blocks if one or more parts go into an unloaded LevelChunk then the placement of all parts is delayed until both LevelChunks are loaded, delayed placement actions are persistent and saved to Level storage until they are executed. If placing the horizontal multi-block in a structure template, and then rotating the structure, the block parts will only rotate properly if the multi-block is also defined with the minecraft:placement_direction trait enabling the minecraft:cardinal_direction state, otherwise the multi-block parts will not respect the structures rotation</li>
+</ul><h4 id="h_01KZ41YADQKNCVC2QNBZ88Z24F">Voxel Shapes</h4><ul><li data-list-item-id="e9f93f65c4845f03814e01502140410ef">Added occlusion voxel shapes for one-arm, two-arm, three-arm, four-arm, and full-arm wall connections. These shapes will be applied to all Wall variations when the Voxel Shapes experiment is enabled. These shapes improve face culling so that hidden faces of custom blocks are correctly removed when attached to different Wall geometries: single posts, wall runs, corners, T-junctions, intersections, and wall clusters</li></ul><h4 id="h_01KZ41YADQSKANR9QXDXGDV4YR">DDUI</h4><ul><li data-list-item-id="e1722bebb704551e266a8dbe9e7aa5bfd">Fixing default behavior for close button bellow DDUI custom forms<ul><li data-list-item-id="e8962e4cb6882c5263397bd517196c85a">Default visibility value is false</li></ul>
+</li></ul><h3 id="h_01KZ41YADQS16DA7CNV8FMV6SF">Editor</h3><ul><li data-list-item-id="e6efe61e6f48d506d8d65ec9474f10aff">Removed and replaced uses of minecraft/server CompoundBlockVolume in the Experimental API with the beta minecraft/server-editor RelativeVolumeListBlockVolume</li></ul><h3 id="h_01KZ41YADQBEHQWW7GWQ2ZNV9H">Items</h3><ul><li data-list-item-id="e7e1d74f833e67ab7880074c318c8730f">Added a new loot function "carry_over_block_entity_data" with a single boolean field "dynamic_properties" defaulted to false<ul>
+<li data-list-item-id="e18d811551a9b8ecc3a6a2b9ee28d20fb">When looting a block with a block-entity and dynamic-properties, it will try to carry its dynamic-properties over to the created item-stack</li>
+<li data-list-item-id="ee14ec773df3d0c28a512cee51b448b5a">Requires "Upcoming Creator Features Experiment"</li>
+</ul>
+</li></ul><h3 id="h_01KZ41YADQE0J4F3EH08PN592J">Jigsaw Structures</h3><ul><li data-list-item-id="e17b3a58c2ec7447fe26a14682943664c">A Jigsaw Structure's layout will now be persisted to disk if any intersecting chunks are saved. This makes partially saved Jigsaw Structures less prone to breaking because of configuration changes. The feature will be incrementally rolled out to online devices and Realms.</li></ul><h3 id="h_01KZ41YADRM4R61RJ0ZMB33592">Sounds</h3><ul>
+<li data-list-item-id="e077d0a8d71c324a74d7f16e6fe4143a7">Added a new minecraft:server_sound_definitions payload to sounds/sound_definitions.json that lets behavior packs declare server-side sound definitions for sounds played from script</li>
+<li data-list-item-id="e6a409613c1b672b2071fe234909501b6">Each definition can include an optional duration_info with a seconds length and a mode that controls how playback time is tracked</li>
+<li data-list-item-id="e750f9aa2785c75f72b2f90a81d87a55c">A mode of game_time means the duration is tracked by ticks</li>
+<li data-list-item-id="e0f87282a651aec3d2d0e39ce464602ee">A mode of real_time means the duration is tracked by wall-clock time</li>
+</ul><p>Example:</p><pre class="language-auto">{
+    "format_version": "beta",
+    "minecraft:server_sound_definitions": [
+        {
+            "sound_event_name": "creatorpack:my_cool_song",
+            "duration_info": {
+                "mode": "game_time",
+                "seconds": 180.0
+            }
+        },
+        {
+            "sound_event_name": "creatorpack:my_other_song",
+            "duration_info": {
+                "mode": "real_time",
+                "seconds": 12.5
+            }
+        },
+        {
+            "sound_event_name": "creatorpack:ambient_loop"
+        }
+    ]
+}
+</pre><ul>
+<li data-list-item-id="e67dee2219980d4c8205f6d9018a48940">Fixed a crash that occurred when loading a behavior pack containing a sounds/sound_definitions.json file with the minecraft:server_sound_definitions payload</li>
+<li data-list-item-id="e1e9cb5e888d359dd5ae925d81aa89fbc">Added minecaft:sound block component<ul>
+<li data-list-item-id="ee9d67e29b15e8aec317b5a20d7ccb1e4">it requires format version 1.26.20 and Experimental Upcoming Creator Features</li>
+<li data-list-item-id="e6539fc7a316b4a11b0e4596b60a50e8c">it can be used to assign a set of sounds to block and its permutations similar to sound field in blocks.json</li>
+<li data-list-item-id="e75768ef9108fd594b0bae95caf62e23c">blocks.json overrides values of minecraft:sound component, including values in all permutations</li>
+</ul>
+</li>
+</ul><pre class="language-auto">{
+
+    "format_version": "1.26.20",
+
+    "minecraft:block": {
+
+        "description": {
+
+            "identifier": "test:test_block"
+
+        },
+
+        "components": {
+
+            "minecraft:sound": {
+
+                "sound": "glass"
+
+            }
+
+        }
+
+    }
+
+}
+
+</pre><h3 id="h_01KZ41YADVY8MHR9FR63TN05M8">User Interface</h3><ul><li data-list-item-id="e9304da5653ee2d54e87ed96debc959e5">Removed the Point Light Shadow Quality slider and merged its functionality into the Point Light Quality slider. These sliders are available only when the "RenderDragon Features for Creators" experiment toggle is enabled for Vibrant Visuals.</li></ul><p>&nbsp;</p>
