@@ -1,0 +1,111 @@
+<h2 id="h_01KYMJTZS08X0VVY3AE5BB54DN">Technical Updates</h2><h3 id="h_01KYMJTZS040F79AW6X4GXWS57">AI Components</h3><ul><li data-list-item-id="e6e0ed0036ae76f54d46f3bfce5c9866d">Made schema for the minecraft:tamemount component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.50 and newer.</li></ul><h3 id="h_01KYMJTZS1GTXEF4NGADB1RWH8">AI Goals</h3><ul>
+<li data-list-item-id="e677a3a1abe63f27d22227a0cdbbbc9b4">Added in_range_movement_mode to minecraft:behavior.ranged_attack for format versions 1.26.50 and newer<ul>
+<li data-list-item-id="e41d9239a8612419966ff789f30c1c9b5">hold_position makes the entity hold its position while within attack range</li>
+<li data-list-item-id="efb44ca1c3232e6666531fc14db0932d0">follow_target makes the entity continue moving toward its target while within attack range</li>
+</ul>
+</li>
+<li data-list-item-id="e35aab93245739c77f322f46b260b84fc">Actor goal minecraft:behavior.ranged_attack now takes a float range for attack_range instead of attack_radius_min and attack_radius for format versions 1.26.50 and newer</li>
+</ul><h3 id="h_01KYMJTZS3HE14RVDCV5WT9DZP">API</h3><ul>
+<li data-list-item-id="eb26972eb7d6e19959b0ead39b1bcc558">Released class EntityStartSneakingAfterEvent from beta to v2.10.0</li>
+<li data-list-item-id="ec35c2c8507bc0ea63bcf855e3115dd75">Released class EntityStartSneakingAfterEventSignal from beta to v2.10.0</li>
+<li data-list-item-id="efb3895e1606ac97f9a67ff7afeb10404">Released class EntityStopSneakingAfterEvent from beta to v2.10.0</li>
+<li data-list-item-id="e6c9d9a18540740bae220bfc20b0d19df">Released class EntityStopSneakingAfterEventSignal from beta to v2.10.0</li>
+<li data-list-item-id="e25c25c48bb730917a81ed692b87889f1">Released interface EntitySneakingChangedEventOptions from beta to v2.10.0</li>
+<li data-list-item-id="e0df4f7de17780ed128fab2c34ad69fbd">Released property WorldAfterEvents.entityStartSneaking from beta to v2.10.0</li>
+<li data-list-item-id="ebd649c622219003cf68afbf08008ee8b">Released property WorldAfterEvents.entityStopSneaking from beta to v2.10.0</li>
+<li data-list-item-id="e49c391ff44d76a087cc44bb2c41f7174">Released Player.fogSettings from beta to v2.10.0</li>
+<li data-list-item-id="e08b6c84c37f0b79ece6ff1a39432ec78">Released class FogSettings from beta to v2.10.0</li>
+<li data-list-item-id="efa39f7b5a7ba5b7a7d16d058f4f5c871">Released class FogSettingsError from beta to v2.10.0</li>
+<li data-list-item-id="eb4849e7642e4dca51257d8b137c6a3b1">Released class BlockDynamicPropertiesComponent from beta to V2.10.0.</li>
+<li data-list-item-id="e92da6f4a5dc47fd23ba76614020291ab">Released class ItemBlockDynamicPropertiesComponent from beta to V2.10.0.</li>
+</ul><h4 id="h_01KYMJTZSB9WA3GB4F7E8A3QSF">DDUI</h4><ul>
+<li data-list-item-id="e87270d301d6e399ae9d2f579465b0ba1">Fixed a bug where hiding a CustomForm and then immediately showing another one would get the response UserBusy. Now it appropriately swaps to the second form.</li>
+<li data-list-item-id="e5b90a6fc7b3c8b6c06f863feaac5ed0b">Released CustomForm.image and ImageOptions to version 2.2.0 of @minecraft/server-ui</li>
+</ul><h4 id="h_01KYMJTZSCBYM6JKFC0D2E5X3M">Loot Tables</h4><ul><li data-list-item-id="e2abc6b24bb25398455cc40ac4d8e2806">Added the optional operator field to all loot table conditions, allowing control of whether the condition's result is used directly or negated<ul>
+<li data-list-item-id="efbca5dee6236d01d607e0e487984b241">== and equals apply when the condition evaluates to true</li>
+<li data-list-item-id="e53f35eb90c41595d6be6038d76ffdf5b">!= and not apply when the condition evaluates to false</li>
+<li data-list-item-id="e378a28d316e2cf5897d7f22c156c1cb7">Omitting operator preserves the existing behavior and is equivalent to using ==</li>
+</ul>
+</li></ul><h5 id="h_01KYMJTZSDABSDGS1WW27GA7A7">Example</h5><p>The following condition allows a loot entry to be selected only when the loot context is not in a biome with the plains tag:</p><pre class="language-auto">{
+  "condition": "biome_has_tag",
+  "operator": "not",
+  "tag": "plains"
+}
+</pre><h4 id="h_01KYMJTZSEBR1KRAXV71XR6GYT">Script Debugger</h4><ul><li data-list-item-id="e940421ed319ed1a218064240c18fc008">Added the script-debugger-listen-address server property; script debugger listen mode now binds to loopback by default, and non-loopback listen addresses require a configured passcode</li></ul><h3 id="h_01KYMJTZSFDHK4R0KACZ0MK4MH">Blocks</h3><h4 id="h_01KYMJTZSFXJWTX3WNQNAC2PQ2">Fences</h4><ul><li data-list-item-id="e320f8f61f9ddbfb931a2c7416b2bba73">Vanilla fence blocks now expose per-direction connection block states (minecraft:connection_north, minecraft:connection_east, minecraft:connection_south, minecraft:connection_west), reflecting which neighbors the fence connects to. Changing a fence's connections now sends block updates to neighboring blocks in worlds using version 1.26.50 and later</li></ul><h4 id="h_01KYMJTZSGM9WN357HWY75DPY6">Stairs</h4><ul>
+<li data-list-item-id="eed710729145057f380c0ede04c557443">Vanilla stair blocks now expose a minecraft:corner block state (none, inner_left, inner_right, outer_left, outer_right) reflecting the corner shape formed with adjacent stairs</li>
+<li data-list-item-id="ecb933ab6b86604fcbfaa3b54781c592d">For new worlds (base game version 1.26.40 and later), stair corner-state changes now trigger neighbor block updates for parity with Java Edition; existing worlds keep the prior client-only update behavior</li>
+</ul><h3 id="h_01KYMJTZSGX5VFKHC1TRBAV8XT">Camera</h3><ul><li data-list-item-id="eae1a2ba7b2906cdc3e97744de24266c3">Camera presets that inherit from minecraft:follow_orbit no longer reset the player's rotation the first time they are applied, for presets using format version 1.26.50 or later</li></ul><h3 id="h_01KYMJTZSJ23HPDEFJR3DNKQC5">Editor</h3><ul>
+<li data-list-item-id="ec47603091ba45f871c674d3ecaa34eef">Updated addUserDefinedOperation API methods to accept separate transaction payloads representing the previous and new operation states</li>
+<li data-list-item-id="e5ab6cbdea181301aa7f5df3858fb8ad2">Removed Header Action API from IRootPropertyPane</li>
+<li data-list-item-id="ec3144fe2e79babb71d86a9dea661e8f8">Added optional property for IRootPropertyPane API to disable scrolling</li>
+<li data-list-item-id="e27d3b18c89bb3aa65dbe73ff96fec906">Fixed a bug where the editing template in Layouts Editor saved in wrong template after changing the selected template in the Layout Template Manager.</li>
+<li data-list-item-id="ec1c514b561bff01bdd8a3ccdfd424aec">This PR adds a new action: Layouts Managements that implements the new UI for the existing Layout Template. It is behind feature toggle for now.</li>
+</ul><h3 id="h_01KYMJTZSNDNY18WJ82BBERYGF">Entity Components</h3><ul>
+<li data-list-item-id="ea79b6925b73f6d7b4299dc309942be0b">Immunity to the freezing from Powder Snow is no longer hardcoded at runtime and is instead defined by the minecraft:freezing_immune component<ul>
+<li data-list-item-id="e4b4274e0a74815107faf0c25aa63cfd0">The following mobs will be upgraded to automatically have this component:<ul>
+<li data-list-item-id="e142f48252fb73fddeff0443b934b58f0">"minecraft:creaking"</li>
+<li data-list-item-id="edbdce383f13a1df11d77d4fe23b6ad3e">"minecraft:ender_dragon"</li>
+<li data-list-item-id="edf3a54debf2dd0c05249c801f9d48254">"minecraft:polar_bear"</li>
+<li data-list-item-id="eb487f3feef57ba2e9437837b95e0a80e">"minecraft:skeleton"</li>
+<li data-list-item-id="e7719dcb159b87324d70e0162b590fc70">"minecraft:snow_golem"</li>
+<li data-list-item-id="ecc1435f4d8e8e61097975b09eac428ce">"minecraft:stray"</li>
+<li data-list-item-id="ea8dee55c3418ab03fd2164d3b82cd345">"minecraft:wither"</li>
+</ul>
+</li>
+<li data-list-item-id="e1948560a210069e80bd7451752a8ecbe">All non-mob entities are implicitly immune</li>
+<li data-list-item-id="eadcb06a00d0ca9ac6a016a16aa19cf0b">
+<p>Used by defining the component as follows:</p>
+<pre class="language-auto">    "minecraft:freezing_immune": {}
+</pre>
+</li>
+</ul>
+</li>
+<li data-list-item-id="e285d5fe1beb78b676d67d34877ddc115">The ambient sounds of entities are no longer redefined at runtime and instead respect the conditions defined by minecraft:ambient_sound_interval<ul>
+<li data-list-item-id="ecfe9044c1be65c8fb8143513b78c672f">Previously the ambient sound event name of an entity would be overwritten in these conditions:<ul>
+<li data-list-item-id="eed3d8807bc48ef360a59c0706f856ff7">If its head was in water then it would become ambient.in.water</li>
+<li data-list-item-id="e1ca08a0e66cecc7c52158cb88f1c66f4">If it was not on the ground then it would become ambient.in.air</li>
+<li data-list-item-id="ef699d3c71fcc22cc06d707b6c0ff5a29">If it would otherwise play ambient and it was a baby then it would become ambient.baby</li>
+</ul>
+</li>
+<li data-list-item-id="e294a1864f790067eae5ffd793c2d5447">If any of these conditions were true then it would override any user-defined entry in the event_names parameter of minecraft:ambient_sound_interval</li>
+<li data-list-item-id="ee7e23112990e30e6dbf64afb88de6848">Now this will no longer happen and only the event name specified by minecraft:ambient_sound_interval will be used</li>
+<li data-list-item-id="e93c5ae6de64dfd2d041959d4e4bc45cf">Entities defined in any older version will fall back to the original overriding path as a minecraft:uses_legacy_ambient_sounds component will be added</li>
+<li data-list-item-id="ea4c1a38b8eef7de7e7dadf69928e83e5">The minecraft:uses_legacy_ambient_sounds is deprecated as users should now specify the indended behavior in minecraft:ambient_sound_interval</li>
+<li data-list-item-id="e75a1952607227e022e7c00d6b58f52f8">Vanilla mobs have been upgraded to use this new syntax, which can be preserved as follows:</li>
+</ul>
+</li>
+</ul><pre class="language-auto">"minecraft:ambient_sound_interval": {
+  "event_name": "ambient",
+  "event_names": [
+    {
+      "condition": "query.head_is_in_water",
+      "event_name": "ambient.in.water"
+    },
+    {
+      "condition": "!query.is_on_ground",
+      "event_name": "ambient.in.air"
+    },
+    {
+      "condition": "query.is_baby",
+      "event_name": "ambient.baby"
+    }
+  ],
+  "range": 16.0,
+  "value": 8.0
+}
+</pre><ul><li data-list-item-id="ee1c9809e32c86845bef6fda77d75d39b">Deprecated minecraft:projectile_component's owner_launch_immunity_ticks field in favor of a spatial check that determines when the projectile has left its shooter's vehicle hierarchy<ul><li data-list-item-id="e8f1002396416f19151b9ca745277c2af">Projectiles can now only hit the entity that shot them, or entities in the same vehicle hierarchy (such as the shooter's mount), after they have spatially left that hierarchy</li></ul>
+</li></ul><p>##Features</p><ul>
+<li data-list-item-id="eaa127ed8c8c3b2488b0363887fbbea8c">A new value, wall, to the field surface has been added to the schema of snap_to_surface_feature, which allows the feature to be snapped to walls as well as ceilings and floors.</li>
+<li data-list-item-id="e4fad3dffbedabbbba2b02253ff0568d2">A new field allow_non_air_placement has been added to the schema of snap_to_surface_feature, which allows specifying whether the snapped feature can be snapped through solid blocks.<ul><li data-list-item-id="e51652a1ce53ce625ac62fe9ab75cddec">If the snap is started inside a block that is not water or air, this field decides if the feature can snap out of it.</li></ul>
+</li>
+<li data-list-item-id="e17d022ee712cab4c0a80f8d492e96636">Renaming the field vertical_search_range to search_range in the schema for snap_to_surface_feature</li>
+</ul><h3 id="h_01KYMJTZT6BNGNNATYA06NREQA">Graphical</h3><ul><li data-list-item-id="e2fc38f286b357081e04ffa8b53b26d98">"Automatic" upscaling quality now defaults to native resolution when using the Custom graphics preset</li></ul><h3 id="h_01KYMJTZT6RAJQ3DBQT6KQXVCA">Mobs</h3><ul><li data-list-item-id="e4547453119128d8d6e9416d805b13678">Many mob properties are no longer saved if their values are the default</li></ul><h3 id="h_01KYMJTZT6QE9ZC5CG2ABTK7CN">Molang</h3><ul><li data-list-item-id="e7818b019ddef46a23db06a70aaa7f352">Added new query query.head_is_in_water which checks if the head of the entity is in water</li></ul><h3 id="h_01KYMJTZT6QGWH3JC11K62J4C3">Stability and Performance</h3><ul><li data-list-item-id="e98a64a94ffe4208793a56312b8fc4556">Fixed issue where item catalog groups with long names crashed the game (<a href="https://bugs.mojang.com/browse/MCPE-240721">MCPE-240721</a>)</li></ul>
+<hr>
+<h2 id="h_01KYMJTZT7C2JZNHG40R1EXKQ1">Experimental Technical Updates</h2><h3 id="h_01KYMJTZT71PG27CEYXB921FHX">API</h3><ul><li data-list-item-id="e345904a696f8e96995f6d7be73a5e4c5">Changed the following beta APIs in @minecraft/server-admin<ul>
+<li data-list-item-id="eceb9be55723acb23b258a4db450b596c">Changed arguments for AllowList.add() take an AllowListEntryNameInfo and boolean to allow this player to ignore player limits when joining the server.</li>
+<li data-list-item-id="eadf9a2f13e976d2ba155fbe5b4344ed9">Changed arguments for AllowList.contains() to take an AllowListEntryNameInfo</li>
+<li data-list-item-id="eec552beaab333b9a1d1bd5c330c5a189">Changed arguments for AllowList.remove() to take an AllowListEntryNameInfo</li>
+<li data-list-item-id="e8e44ec262701b58e8333ebc167b9c520">Added property ignoresPlayerLimit to AllowListEntry</li>
+<li data-list-item-id="e716fea95785adfdd90485264a6af22cd">Added new AllowListEntryNameInfo</li>
+</ul>
+</li></ul><h4 id="h_01KYMJTZT9NDH2BDCHTXS7YX88">ChatSendBeforeEvent</h4><ul><li data-list-item-id="e2851d4e132dbb628f5e6b8b7e4e0ec18">The targets property can now be modified to control which players receive the chat message</li></ul><h4 id="h_01KYMJTZT978NS5Y3Z7VEV2KQV">DDUI</h4><ul><li data-list-item-id="e30e3bc388928aca35133f7541d3a40c2">Fixed input and HUD delay after closing Data Driven UI screens</li></ul>
