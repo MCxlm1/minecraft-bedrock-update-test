@@ -1,0 +1,108 @@
+<h2 id="h_01KZ92ETE0AJ7YD3Z07A8HWGKE">Technical Updates</h2><h3 id="h_01KZ92ETE1YKCGF0XJXCAD88H6">AI Goals</h3><ul><li data-list-item-id="e22d49489f54b5155af4e865be0786d45">Made the schema for minecraft:behavior.follow_mob stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.50 and newer</li></ul><h3 id="h_01KZ92ETE1J29V1DGWB73E6TNN">API</h3><ul>
+<li data-list-item-id="eef42ec6cf9025367bb8a647cc4783aee">Entity.teleport now throws an Error when the entity has passengers and the target dimension is different from the entity's current dimension. Passengers must be dismounted before teleporting to another dimension. Current solution is scoped to fix current game breaking interruptions with future improvements backlogged.</li>
+<li data-list-item-id="e048f143b0e4df1f7f7a15c88747df43c">Tamed pets no longer attempt to follow their owner when the owner travels to or from a custom dimension</li>
+<li data-list-item-id="e0810a92f6b184c2e0d953250672f1051">Fixing 'scale' property on DebugShape when used with DebugCone, DebugEllipsoid, DebugPyramid, and DebugCylinder.</li>
+<li data-list-item-id="ef6ccb2c085b0578f9ea0e11486d22af4">'rotation' property of DebugShape now applies to DebugLine, DebugArrow, DebugCircle, DebugSphere, and DebugBox.</li>
+<li data-list-item-id="eafb422c5261dd8b5ca166d0d7d8713d6">World now exposes a soundDefinitionRegistry property that returns a SoundDefinitionRegistry for querying registered server sound definitions</li>
+<li data-list-item-id="e1894dc61ba8fa22fb9d64959a8bf9bbb">Added SoundDefinitionRegistry with a getDefinitions() method that returns the registered SoundDefinition entries and accepts an optional SoundDefinitionFilter</li>
+<li data-list-item-id="e21f934a412f2f53f87cf5766dab1a0ee">Added SoundDefinition with a soundEventId property, a durationInfo property, a musicInfo property, and a tags property</li>
+<li data-list-item-id="e73ad6b421ae1ea8f5fbef86bdd599fdd">Added SoundDefinitionDurationInfo with a duration property</li>
+<li data-list-item-id="eb4320434b9d50ead8891a2b763678bc5">Added SoundDefinitionMusicInfo with genres, moods, artist, and title properties</li>
+<li data-list-item-id="e2775fdf52677aabae42ee3e362a621f6">Added SoundDefinitionFilter with minDuration, maxDuration, genres, moods, artists, titles, and tags properties</li>
+<li data-list-item-id="e3a8f6015502e95eb54e7cb49a4b3fa42">Player.playSound now accepts a SoundDefinition in addition to a sound event id</li>
+</ul><h4 id="h_01KZ92ETEBBDXFD3DDV8DQ3GGF">Structure Files</h4><ul><li data-list-item-id="e1c2b082f3f148e822abfb662e9b12a60">Added version 2 of the structure (.mcstructure) file format<ul>
+<li data-list-item-id="e0602ecc27e1ee1f1c3a593b91d22cccc">The block_indices arrays are now stored as NBT IntArrayTags instead of a ListTag containing one IntTag per block, which significantly reduces the time and memory needed to save and load structures</li>
+<li data-list-item-id="e9dd6f248a1207ac29717414962c73e12">The second block_indices array is now optional in version 2 structure (.mcstructure) files, and is left out when nothing is stored in the extra block layer, making those files ~50% smaller</li>
+<li data-list-item-id="ee587ed1fccce8896bc8df278c3646c1f">Version 1 structures still load correctly, and are upgraded to version 2 the next time they are saved</li>
+</ul>
+</li></ul><h3 id="h_01KZ92ETEE49BPVEEAYXBVSEGF">Block Components</h3><h4 id="h_01KZ92ETEE5XJNH2D17XSQ98DT">Thin Fences and Trip Wire</h4><ul>
+<li data-list-item-id="ee38fec6100c0a7ce9ea5cd72cea9e49b">Vanilla glass panes, iron bars, copper bars, and trip wire blocks now expose minecraft:connection_north, minecraft:connection_east, minecraft:connection_south, and minecraft:connection_west block states reflecting which cardinal neighbors they connect to</li>
+<li data-list-item-id="e96eb8c6f7257b7c5e185968020ac5f99">For new worlds (base game version 1.26.50 and later), thin-fence and trip-wire connection-state changes now trigger neighbor block updates for parity with Java Edition; existing worlds keep the prior client-only update behavior</li>
+</ul><h3 id="h_01KZ92ETEF2SSSHTP70A5WTA8S">Blocks</h3><ul>
+<li data-list-item-id="e36876d83b3bbcce9137e51b31f5bc0e7">Extended /fill command behaviour with multi-blocks to Scripting fill block APIs, such as Dimension.fillBlocks</li>
+<li data-list-item-id="ecb1d96547fef93eddaa17977ce6dc25b">The block component minecraft:block_entity no longer requires the experimental toggle from format version 1.26.20 onward.</li>
+<li data-list-item-id="e4e84f22a1cd374f56086414894396c52">Removed minecraft:block_entity component restrictions for multi-blocks, each part will have its own block entity by design</li>
+</ul><h3 id="h_01KZ92ETEJ1KCVK66QQ3ZHMA42">Commands</h3><ul><li data-list-item-id="e68019274f726e7aa11b4ff3b8334fa02">Added the serveridentity command, which lets dedicated-server operators save, delete, and check the status of the server identity key</li></ul><h3 id="h_01KZ92ETEJD3F2VFSWS12297B6">Dedicated Server</h3><ul>
+<li data-list-item-id="ed0967fe08b38f5828f601e5721aafa6b">NetherNet is now the default transport used by dedicated servers</li>
+<li data-list-item-id="e9885f56c4c7b38383d8d1c23a279e301">Windows dedicated servers, including EDU, now use the correct application data directory for Bedrock and Education</li>
+<li data-list-item-id="e2e277b2445f5738e08e5cb9eb1c52019">Added a dedicated server option to unpack optimized creator packs into loose files</li>
+</ul><h3 id="h_01KZ92ETEMCJ4ZX7VJ6ECE4MCJ">Editor</h3><ul>
+<li data-list-item-id="e0333d01db281c2531fc02450a3473b27">The Texel Size slider is now disabled when using Soft Shadows in Vibrant Visuals, as this setting has no effect on soft shadow rendering</li>
+<li data-list-item-id="ee837c663c0ff1da479b7d8def6cb46c4">Fixed a bug that caused UI to not load on player join when the server load is high</li>
+<li data-list-item-id="ee397aedd1d05f1d5201fadf0717b91f8">Added color-aware Custom Mesh Tool placement so creators can place imported colored meshes as matched block groups from the Color Block List</li>
+<li data-list-item-id="e15afd4f8444b907789723e833256c9ed">Added a Render Clouds setting to the Editor World View panel</li>
+<li data-list-item-id="ef656806a7a2b339cb6ff53d2fa96fab5">Added addHeader API to ISubPanePropertyItem to create a custom sub pane header with an optional prebaked multiselect checkbox, an overflow menu, and a dynamic region of icon buttons and color pickers</li>
+<li data-list-item-id="ef5343a1cc581a8efe573db5f190961ee">Added buildSubPaneViewControl API to ISubPanePropertyItem to sort, filter, and manage a list of header sub panes</li>
+<li data-list-item-id="e51c9e1a1c130517434e846bbbd09b3ef">Added tags option to ISubPanePropertyItemOptions for filtering sub panes through a parent sub pane view control</li>
+</ul><h3 id="h_01KZ92ETEQKYX8T6J5VK1DPR8F">Entity Components</h3><ul>
+<li data-list-item-id="ef4273590fd96bb425360cf5032ba961c">Made the minecraft:instant_despawn component schema stricter for entity JSON at format version 1.26.50 and later</li>
+<li data-list-item-id="e43d24b3e6723defa200c433556445090">Added the minecraft:can_stand_on_powder_snow component for entity definitions with a format version of 1.26.50 and later<ul>
+<li data-list-item-id="effc02634b1affbcb98c0103e5cdc4947">Entities with this component can stand on top of Powder Snow</li>
+<li data-list-item-id="e2208235d590f20e44091793aa3d6f648">The lightweight type family no longer grants this behavior to entity definitions using format version 1.26.50 or later</li>
+<li data-list-item-id="ec46b42d817905156245077488cc76e36">Entity definitions using an older format version that include the lightweight type family are automatically upgraded to include this component</li>
+<li data-list-item-id="e30c766986a9afaacf34163bf77543888">The vanilla Endermite, Fox, Rabbit, and Silverfish entity definitions no longer include the lightweight type family</li>
+</ul>
+</li>
+<li data-list-item-id="e651a55f23b21a16e2cf91f09c596d123">Added the minecraft:block_movement_slowdown_immunity entity component<ul><li data-list-item-id="e4f20f044452e4ef9d827699b2c4eb104">When set, the entity is immune to movement slowdown from the specified blocks</li></ul>
+</li>
+</ul><h3 id="h_01KZ92ETETFTDBQDK91T22HA28">Sounds</h3><ul><li data-list-item-id="e2e6635a984f32dd9a0577b6766fe3ae8">Released minecaft:sound block component out of experimental<ul>
+<li data-list-item-id="e8cf3ab4672196981a7e222a4f0be9d15">it can be used to assign a set of sounds to block and its permutations similar to sound field in blocks.json</li>
+<li data-list-item-id="e9d09111f3ad4991f38e4dc80f2e9b70e">blocks.json overrides values of minecraft:sound component, including values in all permutations</li>
+</ul>
+</li></ul><pre class="language-auto">{
+    "format_version": "1.26.20",
+    "minecraft:block": {
+        "description": {
+            "identifier": "test:test_block",
+            "states": {
+                "custom:int": [0, 1, 2]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('custom:int') == 1",
+                "components": {
+                "minecraft:sound": {
+                    "sound": "glass"
+                }
+                }
+            },
+                    {
+                "condition": "query.block_state('custom:int') == 2",
+                "components": {
+                "minecraft:sound": {
+                    "sound": "metal"
+                }
+                }
+            },
+        ],
+        "components": {
+            "minecraft:sound": {
+                "sound": "snow"
+            }
+        }
+    }
+}
+</pre><h3 id="h_01KZ92ETEYNG6NQBEPP82GEK29">User Interface</h3><ul><li data-list-item-id="e8b0b2fd60a34455094943ae227b6ea6a">Fixed screens visited not mounting if another global route action happened while the screen was unmounting</li></ul>
+<hr>
+<h2 id="h_01KZ92ETEY8PMR546S4EGM5NCY">Experimental Technical Updates</h2><h3 id="h_01KZ92ETEY10P80W3N376XSEDJ">API</h3><ul>
+<li data-list-item-id="ee2e9d1c158d5ef2de557797a9beaf2e8">Added new tech and support for using scripting to interface with the VS Code debugger live diagnostics:<ul>
+<li data-list-item-id="e720feea9fd63d80b30f5c985ad8546bf">Added class DiagnosticsManager to access the new debugger diagnostics tech.</li>
+<li data-list-item-id="e04828c99ed04433fcfceade78008e753">Added class DiagnosticsTab, used to represent a tab view in the debugger live diagnostics page.</li>
+<li data-list-item-id="ee044838d1e6107db15b611171f4458ed">Added class DiagnosticsView, used to represent a single display view within a tab.</li>
+<li data-list-item-id="e9cc84a0ad8ab48b0b135e62664e374bc">Added class DiagnosticsStat for representing data to be used with the live diagnostics.</li>
+<li data-list-item-id="ed348d0950dea7583a94ab4194241ee50">Added class DiagnosticsError for diagnostics related errors.</li>
+</ul>
+</li>
+<li data-list-item-id="e64057a8161c74c05f70689f221aadedc">Added WorldClock class to @minecraft/server in beta<ul><li data-list-item-id="eee4d848e8819cd5a3d582ec383985d9b">Has properties for name, time, and isPaused to retrieve state of the world clock</li></ul>
+</li>
+<li data-list-item-id="e03d84b41a3d5d12f27d534e6fdcf472c">Added WorldClockRegistry class to @minecraft/server in beta<ul><li data-list-item-id="e1477e3fb27993c434d5451f39c67c4fa">Has a registerClock function to allow registrations of new world clocks during startup</li></ul>
+</li>
+<li data-list-item-id="eef6e59b27963eec612d8ecd40085af15">Added WorldClockRegistrationError class to @minecraft/server in beta. This is thrown by WorldClockRegistry.registerClock when registration of a world clock fails</li>
+<li data-list-item-id="e5364c498e1622b5798f601d6b7f9be50">Added WorldClockReloadNewWorldClockError class to @minecraft/server in beta. This is thrown when trying to register a new world clock after reloading scripts</li>
+<li data-list-item-id="e51bc54773d02ded71f734fdfeead1d39">Added WorldClockInvalidRegistryError class to @minecraft/server in beta. This is thrown when trying to register world clocks outside of the BeforeStartupEvent</li>
+<li data-list-item-id="e7bfccc221d9f21787508612cf5416ed8">Added WorldClockNotFoundError class to @minecraft/server in beta. This is thrown by World.getClock when a world clock does not exist</li>
+<li data-list-item-id="e0d57d6a5f79282463110f66325c2e02f">Added WorldClockRegistry to BeforeStartupEvent in beta</li>
+<li data-list-item-id="e3a6aab6a6d9fae3bf8f33e61aec91dbe">Added getClock function to the World class in beta</li>
+</ul><h4 id="h_01KZ92ETF6A93WF7DJVDM770G3">BlockUtilityTasks</h4><ul><li data-list-item-id="ee792f74247e64a26646c3de2137e186e">Added the optional directionMask parameter to floodSearch for restricting traversal directions</li></ul><h3 id="h_01KZ92ETF63NAJD7WS1NNDPZE8">Features</h3><ul><li data-list-item-id="e3e92b8b83e391e646149704e196af1cb">Add scripting API to query Points of Interest (POI) in the current dimension</li></ul><h3 id="h_01KZ92ETF79Z335J2H80805G31">Graphical</h3><ul><li data-list-item-id="ee3fe021881c045d07d363272a89c97f8">Fixed Book and Quill's lighting value when on a Lectern when Block Light Quality is set to Volumetric Lights or above<ul><li data-list-item-id="e9136c9bb1460f9ffb6d94fc7638b2147">Fixed an issue that caused the brightness of some point lights to oscillate</li></ul>
+</li></ul>
