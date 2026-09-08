@@ -1,0 +1,105 @@
+<p><strong>Posted:</strong>&nbsp;8 September 2026</p><h3 id="h_01KNPK0P63JGFQT6KG30RZEDW7"><strong>Information on Minecraft Preview and Beta:</strong></h3><ul>
+<li data-list-item-id="e8b8a931eaeec09cc455cc0540059c202">These work-in-progress versions can be unstable and may not be representative of final version quality</li>
+<li data-list-item-id="e62074b252bf7372063090f90f796a561">Minecraft Preview is available on Xbox, PlayStation, Windows, and iOS devices. More information can be found at&nbsp;<a href="https://aka.ms/PreviewFAQ" target="_blank" rel="noopener noreferrer" aria-label="aka.ms/PreviewFAQ (Opens in new window or tab)" data-bi-id="n4a3" data-bi-name="aka.ms/previewfaq">aka.ms/PreviewFAQ</a><span role="presentation" aria-hidden="true"></span>
+</li>
+<li data-list-item-id="e8896c7e884a7174e25bbf653333d3586">The beta is available on Android (Google Play). To join or leave the beta, see&nbsp;<a href="https://aka.ms/JoinMCBeta" target="_blank" rel="noopener noreferrer" aria-label="aka.ms/JoinMCBeta (Opens in new window or tab)" data-bi-id="n5a3" data-bi-name="aka.ms/joinmcbeta">aka.ms/JoinMCBeta</a> <span role="presentation" aria-hidden="true"></span>for detailed instructions</li>
+</ul><p dir="auto" data-line="2">It's time for another Preview and Beta release! For the full list of goodies, browse the changelog below. And as always, we’re keen to get your feedback on these new features at&nbsp;<a href="https://feedback.minecraft.net/" data-href="https://feedback.minecraft.net/">feedback.minecraft.net</a>, and you can report any bugs you find at&nbsp;<a href="https://bugs.mojang.com/" data-href="https://bugs.mojang.com/">bugs.mojang.com</a>.</p><h1 id="features-and-bug-fixes" dir="auto" data-line="28">Features and Bug Fixes</h1><h2 id="accessibility-features" dir="auto" data-line="30">Accessibility Features</h2><ul dir="auto" data-line="7">
+<li dir="auto" data-line="5" data-list-item-id="e31f29c8bbab1cd9498d9d9abb84ce584"><p dir="auto" data-line="5">Fixing enumeration problems with controller on various modals on Realms</p></li>
+<li dir="auto" data-line="7" data-list-item-id="e7ccda30b5d2ca747dd13317b056090ea"><p dir="auto" data-line="7">Fixing Realm rate limit modal not being enumerated</p></li>
+<li dir="auto" data-line="9" data-list-item-id="eeca230a2c498693bad2342bf01db446e"><p dir="auto" data-line="9">Fixing close X button on moderation feed options modal not being enumerated</p></li>
+</ul><h2 id="blocks" dir="auto" data-line="35">Blocks</h2><ul dir="auto" data-line="15"><li dir="auto" data-line="13" data-list-item-id="e5f89f3ed2d18c4c61f42c4ae7cc1148b">Wool and Concrete blocks now correctly produce instrument sounds when used with Note blocks (<a href="https://bugs.mojang.com/browse/MCPE-241748" data-href="https://bugs.mojang.com/browse/MCPE-241748">MCPE-241748</a>) (<a href="https://bugs.mojang.com/browse/MCPE-241749" data-href="https://bugs.mojang.com/browse/MCPE-241749">MCPE-241749</a>)</li></ul><h3 id="straw-bed" dir="auto" data-line="38">Straw Bed</h3><ul dir="auto" data-line="43">
+<li dir="auto" data-line="17" data-list-item-id="e9e0796dc32e02422bd1b0e27bc8d0008"><p dir="auto" data-line="17">Straw Beds can no longer be placed on blocks occupied by an entity</p></li>
+<li dir="auto" data-line="19" data-list-item-id="e3183d51bc4240d6243deae21292e01a2"><p dir="auto" data-line="19">Fixed the Straw Bed block reporting missing geometry content errors and rendering incorrectly in worlds and templates using a base game version older than 26.50</p></li>
+</ul><h2 id="commands" dir="auto" data-line="42">Commands</h2><ul dir="auto" data-line="49">
+<li dir="auto" data-line="23" data-list-item-id="e898fb889889f7356e1e8aa11f0b5c45b"><p dir="auto" data-line="23">Fixed an issue where an extended Piston was missing from the results of&nbsp;<code>/clone</code>&nbsp;when its arm was outside the cloned area, and where a piston cloned without its arm would destroy itself</p></li>
+<li dir="auto" data-line="25" data-list-item-id="e93cd2e1c7fd969d5cf6503a3d683e90f">
+<p dir="auto" data-line="25">/time command now prevents setting a negative time value. When adding time or setting time to the next day results in a value larger than the maximum time amount, it will evaluate to the equivalent time from the first day</p>
+<ul dir="auto" data-line="27"><li dir="auto" data-line="27" data-list-item-id="ef1c4dbe555c118ffeff9c83ebc80f61a">Running&nbsp;<code>/time add &lt;time&gt;</code>&nbsp;in worlds currently with a negative time will be fixed up to add the result from the first day</li></ul>
+</li>
+</ul><h2 id="effects" dir="auto" data-line="47">Effects</h2><ul dir="auto" data-line="56"><li dir="auto" data-line="30" data-list-item-id="e1b41f33881815d2af6667603fbf11048">Regeneration from Axolotls can no longer be stacked infinitely (<a href="https://bugs.mojang.com/browse/MCPE-183841" data-href="https://bugs.mojang.com/browse/MCPE-183841">MCPE-183841</a>)</li></ul><h2 id="gameplay" dir="auto" data-line="50">Gameplay</h2><ul dir="auto" data-line="60">
+<li dir="auto" data-line="34" data-list-item-id="e46b632cd367ecaba203febd073a58982"><p dir="auto" data-line="34">Fixed a bug where a Zombie trying to simultaneously equip multiple items on the ground could lead to some of those items disappearing instead (<a href="https://bugs.mojang.com/browse/MCPE-238979" data-href="https://bugs.mojang.com/browse/MCPE-238979">MCPE-238979</a>)</p></li>
+<li dir="auto" data-line="36" data-list-item-id="ee5d2d1d13ccb7371f5d318204c5a1285"><p dir="auto" data-line="36">Effects that are weaker but have longer duration now correctly resume after a stronger but shorter duration effect of the same type expires (<a href="https://bugs.mojang.com/browse/MCPE-74059" data-href="https://bugs.mojang.com/browse/MCPE-74059">MCPE-74059</a>)</p></li>
+<li dir="auto" data-line="38" data-list-item-id="e7bd75640b219ee7031020f693b13d70d"><p dir="auto" data-line="38">Trapdoors now have snappable placement: holding the place block control while a Trapdoor is selected will only place Trapdoors in a fixed direction until the control is released</p></li>
+<li dir="auto" data-line="40" data-list-item-id="e00f31853ad4863f583815a04648c4f40"><p dir="auto" data-line="40">Snappable placement de-activates interaction with blocks until the placement interaction is completed.</p></li>
+<li dir="auto" data-line="42" data-list-item-id="ed0b2d267e36c51debfe737ac1238f8d6"><p dir="auto" data-line="42">Players no longer stop sneaking when touching water (<a href="https://bugs.mojang.com/browse/MCPE-167218" data-href="https://bugs.mojang.com/browse/MCPE-167218">MCPE-167218</a>)</p></li>
+<li dir="auto" data-line="44" data-list-item-id="ee60c3098549ab1728d17aeeb29a0f117">
+<p dir="auto" data-line="44">Red and Brown Mushrooms can now be placed on any block with a top solid face regardless of lighting conditions</p>
+<ul dir="auto" data-line="45"><li dir="auto" data-line="45" data-list-item-id="e15cb679eceab0f4f1b72a914e6d71db8">They still cannot spread unless the brightness at the new growth is less than 13, or its support block overrides light requirements like Mycelium</li></ul>
+</li>
+</ul><h2 id="general" dir="auto" data-line="59">General</h2><ul dir="auto" data-line="74"><li dir="auto" data-line="48" data-list-item-id="e7d71ce2aaa3101303fa686da40eb7ae0">Fix untranslated text while importing worlds on PlayStation (<a href="https://bugs.mojang.com/browse/MCPE-237739" data-href="https://bugs.mojang.com/browse/MCPE-237739">MCPE-237739</a>)</li></ul><h2 id="graphical" dir="auto" data-line="62">Graphical</h2><ul dir="auto" data-line="78"><li dir="auto" data-line="52" data-list-item-id="efe42fda5a51af67480bd61f4fb632fe1">Fixed a crash when adjusting render resolution on PlayStation with high settings in Vibrant Visuals</li></ul><h2 id="input" dir="auto" data-line="65">Input</h2><ul dir="auto" data-line="82"><li dir="auto" data-line="56" data-list-item-id="ebacc5b4cac005681be7b30245186d630">Fixed instances of first inputs not appearing in chat window textbox on Android devices (<a href="https://bugs.mojang.com/browse/MCPE-241422" data-href="https://bugs.mojang.com/browse/MCPE-241422">MCPE-241422</a>)</li></ul><h2 id="realms" dir="auto" data-line="69">Realms</h2><ul dir="auto" data-line="87">
+<li dir="auto" data-line="61" data-list-item-id="e063ed8908e76c103c7bdf8cb20f181c5"><p dir="auto" data-line="61">The correct active world size is now displayed consistently in the Realms Hub World tab</p></li>
+<li dir="auto" data-line="63" data-list-item-id="eaf8eb164404f80ff91d2398738b4adc4"><p dir="auto" data-line="63">Realm world settings no longer remain stuck saving when the connection is interrupted</p></li>
+<li dir="auto" data-line="65" data-list-item-id="e0c2bd0d1aa2706bb75ef4cdab4048815"><p dir="auto" data-line="65">Hardcore worlds are now identified correctly in Realm world slots</p></li>
+</ul><h2 id="stability-and-performance" dir="auto" data-line="74">Stability and Performance</h2><ul dir="auto" data-line="95"><li dir="auto" data-line="69" data-list-item-id="e782348c06db229370f7ec817587d8697">Dedicated servers now exit cleanly when incompatible&nbsp;<code>allow-list</code>&nbsp;and&nbsp;<code>online-mode</code>&nbsp;settings are configured</li></ul><h2 id="user-interface" dir="auto" data-line="77">User Interface</h2><ul dir="auto" data-line="99">
+<li dir="auto" data-line="73" data-list-item-id="ef885ad68e911b34e18311418541edd0e"><p dir="auto" data-line="73">Improve initial loading time for Ore UI screens in Betas and Previews (<a href="https://bugs.mojang.com/browse/MCPE-180677" data-href="https://bugs.mojang.com/browse/MCPE-180677">MCPE-180677</a>)</p></li>
+<li dir="auto" data-line="75" data-list-item-id="edaec89260ca589505f718f9c31c6e49a"><p dir="auto" data-line="75">Added an informational message explaining when Improved Input Response is unavailable (<a href="https://bugs.mojang.com/browse/MCPE-230699" data-href="https://bugs.mojang.com/browse/MCPE-230699">MCPE-230699</a>)</p></li>
+<li dir="auto" data-line="77" data-list-item-id="ec77e7b7709ccd73a53adc9e45bfbcf04"><p dir="auto" data-line="77">Improved the alignment and line wrapping of Chinese, Japanese, and Korean text in chat, books, and signs</p></li>
+<li dir="auto" data-line="79" data-list-item-id="e5f70d9ebd49579ca2d76f682ed2b5e97"><p dir="auto" data-line="79">The Command Block screen no longer censors partially typed words while the command is being edited (<a href="https://bugs.mojang.com/browse/MCPE-238739" data-href="https://bugs.mojang.com/browse/MCPE-238739">MCPE-238739</a>)</p></li>
+<li dir="auto" data-line="81" data-list-item-id="e1146da8ff757b746ec1e2a8b9c11bfdc"><p dir="auto" data-line="81">Large worlds can now be duplicated on Switch when sufficient storage is available.</p></li>
+<li dir="auto" data-line="83" data-list-item-id="eebd3d374b3eb6e2c702e4f51fd899268"><p dir="auto" data-line="83">Fixed Android back button not working in Ore UI</p></li>
+<li dir="auto" data-line="85" data-list-item-id="e2dd39c1538a947b82a576e305b705690"><p dir="auto" data-line="85">Fixed issue where accordion component was not narrating expanded hint</p></li>
+<li dir="auto" data-line="87" data-list-item-id="e26c39e01895190739799e71eb7d871fd"><p dir="auto" data-line="87">Updated how received party invites are shown and interacted with in the Social Drawer</p></li>
+</ul><h1 id="technical-updates" dir="auto" data-line="87">Technical Updates</h1><h2 id="ai-goals" dir="auto" data-line="89">AI Goals</h2><ul dir="auto" data-line="119">
+<li dir="auto" data-line="93" data-list-item-id="ed57b27a5f583de28f37610ebb922bb46"><p dir="auto" data-line="93">Made the schema for&nbsp;<code>minecraft:behavior.float_tempt</code>&nbsp;stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.60 and newer</p></li>
+<li dir="auto" data-line="95" data-list-item-id="ee12b5407dda3db0667443b636fc4248c"><p dir="auto" data-line="95">Made the schema for&nbsp;<code>minecraft:behavior.tempt</code>&nbsp;stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.60 and newer</p></li>
+<li dir="auto" data-line="97" data-list-item-id="e12973f3dca10fd1146da18588f586875"><p dir="auto" data-line="97">Made the schema for&nbsp;<code>minecraft:behavior.send_event</code>&nbsp;stricter when parsing, now will fail to load an entity json that has invalid data in versions 1.26.60 and newer</p></li>
+<li dir="auto" data-line="99" data-list-item-id="e0d4b9dfa60a2030094e76daf74aee717"><p dir="auto" data-line="99">Made schema for the&nbsp;<code>minecraft:behavior.panic</code>&nbsp;component stricter when parsing so that it will fail to load an entity json that has invalid data in versions 1.26.60 and newer</p></li>
+<li dir="auto" data-line="101" data-list-item-id="ee4bdabda2ce7e37fbb7d719bf5199afd"><p dir="auto" data-line="101">Changed&nbsp;<code>minecraft:behavior.panic</code>&nbsp;to not stop and start every tick when the mob is stuck</p></li>
+</ul><h2 id="dedicated-server" dir="auto" data-line="97">Dedicated Server</h2><ul dir="auto" data-line="132"><li dir="auto" data-line="106" data-list-item-id="ee3247571e5f7b432cf68da793ccbd11f">Updated the warning that suggests trying NetherNet to instead be an error when users are not using NetherNet, as RakNet is deprecated</li></ul><h2 id="editor" dir="auto" data-line="100">Editor</h2><ul dir="auto" data-line="136">
+<li dir="auto" data-line="110" data-list-item-id="e7b05d7439e14ef961441a9faa01302df">Fixed a bug that selected chunks are not reflecting biome data assignments without reloading the game.</li>
+<li dir="auto" data-line="111" data-list-item-id="ed5cd72d9afcdc0412f79a8c9ec7f1a03">Fixed a bug that caused flickering after clicking the button of assign biome data.</li>
+</ul><h2 id="entity-components" dir="auto" data-line="104">Entity Components</h2><ul dir="auto" data-line="141">
+<li dir="auto" data-line="115" data-list-item-id="e32368b220e9fc2e78b28f683892a491a"><p dir="auto" data-line="115">Bred sheep now expose the&nbsp;<code>minecraft:color</code>&nbsp;entity component</p></li>
+<li dir="auto" data-line="117" data-list-item-id="ecc8c787b83eaffc884fc3f73a737de38"><p dir="auto" data-line="117">Made schema for the&nbsp;<code>minecraft:annotation.break_door</code>&nbsp;component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</p></li>
+<li dir="auto" data-line="119" data-list-item-id="ed6190afc2239bf1ba6fb3af270395f00">
+<p dir="auto" data-line="119">Made schema for the&nbsp;<code>minecraft:attack</code>&nbsp;component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</p>
+<ul dir="auto" data-line="121"><li dir="auto" data-line="121" data-list-item-id="eee8ad138f505c79e5affecfaab8bcd9c">
+<code>damage</code>&nbsp;now only accepts a scalar or an object with&nbsp;<code>min</code>&nbsp;and&nbsp;<code>max</code>&nbsp;values. Array values are no longer valid.</li></ul>
+</li>
+<li dir="auto" data-line="122" data-list-item-id="e60363b095c136608ebc39f96ec1a13be"><p dir="auto" data-line="122">Made schema for the&nbsp;<code>minecraft:inventory</code>&nbsp;component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</p></li>
+<li dir="auto" data-line="124" data-list-item-id="e6846051b0d983fd86bfaf41accd94e2f"><p dir="auto" data-line="124">Made schema for the&nbsp;<code>minecraft:spell_effects</code>&nbsp;component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</p></li>
+<li dir="auto" data-line="126" data-list-item-id="e52314b3002bcd76cbfe0ed5505556137">
+<p dir="auto" data-line="126">Made schema for&nbsp;<code>minecraft:transformation</code>&nbsp;stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</p>
+<ul dir="auto" data-line="128">
+<li dir="auto" data-line="128" data-list-item-id="e9108d3277d591e8712803378e1abb4fd">
+<code>value</code>,&nbsp;<code>block_radius</code>, and&nbsp;<code>block_max</code>&nbsp;fields under&nbsp;<code>delay</code>&nbsp;now reject negative values</li>
+<li dir="auto" data-line="129" data-list-item-id="e9f0635a5c19e39e58614c8381be86ad6">
+<code>block_assist_chance</code>&nbsp;and&nbsp;<code>block_chance</code>&nbsp;fields under&nbsp;<code>delay</code>&nbsp;now take floats in the range 0.0 to 1.0</li>
+<li dir="auto" data-line="130" data-list-item-id="e0516d656cb3e15c66b25713208397206">
+<code>delay</code>&nbsp;no longer accepts a bare number shorthand in versions 1.26.60 and newer; use the object form&nbsp;<code>{ "value": &lt;seconds&gt; }</code>&nbsp;instead</li>
+<li dir="auto" data-line="131" data-list-item-id="e754e240294af395bdecf379fe596d761">
+<code>begin_transform_sound</code>&nbsp;and&nbsp;<code>transformation_sound</code>&nbsp;no longer accept a single string shorthand in versions 1.26.60 and newer; use an array of sound names instead</li>
+</ul>
+</li>
+</ul><h2 id="mobs" dir="auto" data-line="117">Mobs</h2><ul dir="auto" data-line="160"><li dir="auto" data-line="134" data-list-item-id="eb2d6fb47ffe6ef89d165cc9efb451a3f">Many mob properties are no longer saved if their values are the default</li></ul><h1 id="experimental-technical-updates" dir="auto" data-line="120">Experimental Technical Updates</h1><h2 id="api" dir="auto" data-line="122">API</h2><h3 id="ddui" dir="auto" data-line="123">DDUI</h3><ul dir="auto" data-line="124">
+<li dir="auto" data-line="141" data-list-item-id="eea1949f7873ec7e168ae56e0c6c4ba48">Fixed labels removing all whitespace adjacent to formatting codes.</li>
+<li dir="auto" data-line="142" data-list-item-id="e16ce3e29f3a7bb78f29504f51fbc8617">Added support for multi button row at custom forms in beta.</li>
+<li dir="auto" data-line="143" data-list-item-id="e2157c7c104d8b946f1cd8b75d9df539c">New interface&nbsp;<code>ButtonData</code>.<ul dir="auto" data-line="144">
+<li dir="auto" data-line="144" data-list-item-id="e17f2d30e1953b6d95a8b7d4119616504">Field&nbsp;<code>label: ObservableString | ObservableUIRawMessage | string | UIRawMessage</code>. Text to display.</li>
+<li dir="auto" data-line="145" data-list-item-id="e8b0ec785a761942ff0afc5b2134affb4">Field&nbsp;<code>onClick: () =&gt; void</code>. Action to execute when button is pressed.</li>
+<li dir="auto" data-line="146" data-list-item-id="e6e9125198f6f1595c05f708bb3d0ee53">Field&nbsp;<code>options?: ButtonOptions</code>. Additional configuration for the button.</li>
+</ul>
+</li>
+<li dir="auto" data-line="147" data-list-item-id="e60b00909fb7bb7268722e50ef6c14447">Class&nbsp;<code>CustomForm</code>.<ul dir="auto" data-line="148"><li dir="auto" data-line="148" data-list-item-id="e2fdd343dfd78d35c08b9deaee650f535">New method&nbsp;<code>multiButtonRow(buttons: ButtonData[], options?: MultiButtonRowOptions): CustomForm;</code>. Adds a multi button row.'<ul dir="auto" data-line="149">
+<li dir="auto" data-line="149" data-list-item-id="e9282f48d2397d85b32ca2020b45bbf60">Parameter&nbsp;<code>buttons</code>&nbsp;is an array that allows maximum three elements.</li>
+<li dir="auto" data-line="150" data-list-item-id="e9cabe341364f9dd301c5f1e6ac92e37c">Parameter&nbsp;<code>options</code>&nbsp;contains additional configuration for the row, like visibility.</li>
+</ul>
+</li></ul>
+</li>
+</ul><h2 id="commands-1" dir="auto" data-line="135">Commands</h2><ul dir="auto" data-line="153">
+<li dir="auto" data-line="153" data-list-item-id="e46874782428dde5b46a52800a2ace23d">
+<p dir="auto" data-line="153">Added new overloads to the&nbsp;<code>/time</code>&nbsp;command for more control of the Overworld clock under the Creator World Clocks Features experiment</p>
+<ul dir="auto" data-line="155">
+<li dir="auto" data-line="155" data-list-item-id="e89b09f56e36511de12a153ab1acd291f">
+<code>/time pause</code>&nbsp;- Pauses the Overworld clock</li>
+<li dir="auto" data-line="156" data-list-item-id="ece4516a45cd7d063ddf9fc6b603025a3">
+<code>/time resume</code>&nbsp;- Resumes the Overworld clock</li>
+<li dir="auto" data-line="157" data-list-item-id="e594659a3727bb3e78f6880ef368f03ea">
+<code>/time query time</code>&nbsp;- Outputs the Overworld clock's current time</li>
+</ul>
+</li>
+<li dir="auto" data-line="158" data-list-item-id="ef9d5e9783174cfb418a2b1bd1bff5733">
+<p dir="auto" data-line="158">Replaced&nbsp;<code>/time set &lt;TimeSpec&gt;</code>&nbsp;with&nbsp;<code>/time set &lt;TimeMarker&gt; (next|previous|stay)</code>&nbsp;under the Creator World Clocks Features experiment</p>
+<ul dir="auto" data-line="160"><li dir="auto" data-line="160" data-list-item-id="eded5ebe1c5274670e27b8b1e2cc6d5d3">Sets the Overworld clock to the occurrence of the time marker. By default this is&nbsp;<code>next</code>&nbsp;and works the same as the old&nbsp;<code>TimeSpec</code>&nbsp;variation</li></ul>
+</li>
+</ul>
