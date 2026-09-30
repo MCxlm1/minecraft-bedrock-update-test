@@ -1,0 +1,122 @@
+<h2 id="h_01M3SDX13B53EM89WFFPAF1V2X">Technical Updates</h2><h3 id="h_01M3SDX13BT3C7R7N4ZN5YAYDV">Commands</h3><ul>
+<li data-list-item-id="efeaffdfdd9d154ee48db108b97db1d59">Removed the Creator World Clocks Features experiment</li>
+<li data-list-item-id="e6e1b05aa092a9b9ea42d2292be112ae1">/time of commands no longer require the Creator World Clocks Features experiment</li>
+<li data-list-item-id="e8e9f0d8796f6e6fef74229b79151acf4">New /time commands no longer require the Creator World Clocks Features experiment<ul>
+<li data-list-item-id="e119b7f1c2a06b981990a8c855d28928f">/time set &lt;TimeMarker&gt; (next|previous|stay)</li>
+<li data-list-item-id="edc446619f802ca6ce5f912d8b69817ae">/time pause</li>
+<li data-list-item-id="ec4c2d1b21a52896e9968913145f040ff">/time resume</li>
+<li data-list-item-id="e99f8807a1e982b838fc964f92f80f6bb">/time query time</li>
+</ul>
+</li>
+<li data-list-item-id="e81cd7d8e59b01183bfd1c92a0a4c8ad7">Add new /time of sub-command for modifying world clocks<ul>
+<li data-list-item-id="e93876ea3c93030c629e96679cfdd9ae5">/time of &lt;clock&gt; add &lt;time&gt; - Adds time to the clock. Cannot result in a negative time</li>
+<li data-list-item-id="eda861b0f988f990a8f10d31f4a7a873a">/time of &lt;clock&gt; set &lt;time&gt; - Sets the clock to the specified time. Cannot be set to negative.</li>
+<li data-list-item-id="ec5ba0420a33840702b81a22de6f8cd40">/time of &lt;clock&gt; set &lt;timemarker&gt; (next|previous|stay) - Sets the clock to the occurrence of the time marker. Cannot result in a negative time</li>
+<li data-list-item-id="eae40f43f2bf8ecb5140d02faa9363b7d">/time of &lt;clock&gt; pause - Pauses the clock</li>
+<li data-list-item-id="e5bd507f4bb7dcf5f3041ad77de014a59">/time of &lt;clock&gt; resume - Resumes the clock</li>
+<li data-list-item-id="ee108138cc9e2ad538fef94d6d0eb6246">/time of &lt;clock&gt; query time - Outputs the clock's current time</li>
+</ul>
+</li>
+<li data-list-item-id="efd6cda55b3225a6c79dd750963d59049">Added new overloads to the /time command for more control of the Overworld clock<ul>
+<li data-list-item-id="e45a936cbf057fee0717a5a95d896f2af">/time pause - Pauses the Overworld clock</li>
+<li data-list-item-id="ea1b9c1ac5b424c8dbb53c71d5330a46d">/time resume - Resumes the Overworld clock</li>
+<li data-list-item-id="edbde0d70d0ab2bf3cca52f346bd40650">/time query time - Outputs the Overworld clock's current time</li>
+</ul>
+</li>
+<li data-list-item-id="ef8d2ef3e0c7e0421fef806a430527884">Replaced /time set &lt;TimeSpec&gt; with /time set &lt;TimeMarker&gt; (next|previous|stay)<ul><li data-list-item-id="ef21c9922d57edbc5d6bfa8cde51ec257">Sets the Overworld clock to the occurrence of the time marker. By default this is next and works the same as the old TimeSpec variation</li></ul>
+</li>
+</ul><h3 id="h_01M3SDX13H8YK56K6P0D2RV3DA">Editor</h3><ul><li data-list-item-id="e7bddb11fd29457ca6eef7be9ed4f8dcb">Fixed a bug that caused a lag spike when changing the mouse cursor icon</li></ul><h3 id="h_01M3SDX13H3RC6Z52ZMMTMKGSK">.mcstructure Files</h3><ul><li data-list-item-id="e146e8362f4e284134411fa853cad2701">Version 2 structure (.mcstructure) files can now use zlib compression to reduce file size<ul>
+<li data-list-item-id="e1d8532e827588a59bf985c67615824ba">Added a root-level NBT integer tag, compression, with 0 for no compression and 1 for zlib compression; existing files without this tag continue to load as uncompressed structures</li>
+<li data-list-item-id="e26725f551179c50c274adc79d74a2cc1">When compression is 1, the entire structure compound is serialized as NBT and stored as a zlib-compressed NBT byte array; other root-level metadata remains uncompressed</li>
+<li data-list-item-id="e22e5e27868a70dc2421857b2e68876e1">Structures exported from the game will now use this compression.</li>
+</ul>
+</li></ul><h3 id="h_01M3SDX13KV9A9ZXB2ZW9F9VAA">API</h3><ul>
+<li data-list-item-id="e8e85a5ed79fbe97b4504624a0bc66c03">Being shown a player-scoped TextPrimitive or a CustomForm no longer corrupts a locator bar on next player joins</li>
+<li data-list-item-id="e598572c1db6fed8957feec754c0d331b">Released WorldClockRegistry from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="eee44db9772ba8716853a5c4bc1d489e1">Released WorldClock from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ef92c99dfc6332b976b98c5c888cdcbd0">Released TimeMarker from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ee90a41b412a4f78547745d7ce0914d47">Released WorldClockRegistrationOptions from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ea29d9cb061cbdb6f0a214c60d04575a2">Released TimeMarkerOptions from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e93b6b851a6b2e3ef92cd9fd1931bb0dc">Released WorldClockOnTimeModifiedAfterEvent from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e06a66eb30a4757b52b73b58ba2920377">Released WorldClockOnTimeModifiedAfterEventSignal from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ec844ebb36f8fa99bdfab00dc57c351bb">Released WorldClockOnPausedAfterEvent from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="eaec6eab0122d6d287317f3cc6824ca38">Released WorldClockOnPausedAfterEventSignal from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="eb14f09bccf633e041965ff9ed6bda4f9">Released WorldClockOnResumedAfterEvent from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e495a2b01727d93bd09ece22509824e08">Released WorldClockOnResumedAfterEventSignal from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ef92bb146dd6b31e5338beea51161f348">Released WorldClockOnTimeMarkerAfterEvent from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e28f1b4a020b410684e4cb36d3e88b281">Released WorldClockOnTimeMarkerAfterEventSignal from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e7c31a56447263cc93b8b715a8c22304c">Released WorldClockOnRestartBeforeEvent from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e4bf0fac8600c2e45cdb8675886e17b97">Released WorldClockOnRestartBeforeEventSignal from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ea0bfbcc1f89fd7db31fceb3105bcc9bf">Released WorldClockEventOptions from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e18f80f0480bdb787943a0f372fbec43d">Released WorldClockTimeMarkerEventOptions from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e2b97fa5221f2d75239122f885356614c">Released WorldClockRegistrationError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e42a824116d69668b8df3cc8cfe4b6b79">Released WorldClockReloadNewWorldClockError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ea15dd089995a8ba4417d94f814199e61">Released WorldClockReloadTimeMarkerError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e9bc169fb7f97993bfa6c172497ad8aa8">Released WorldClockInvalidRegistryError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="ea0c2ee8b0da7ed0552c3a0cf7112a78a">Released WorldClockNotFoundError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="edd52f22a5f6f6e6a2dcd79c7fd666152">Released WorldClockTimeMarkerNotFoundError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="eb149bce67c522a706b6e7f3ff30d8bca">Released WorldClockAddTimeMarkerError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e72aaead0a414240c1af78b0e761d0329">Released WorldClockRemoveMinecraftTimeMarkerError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e0aa0a90f705c9474e7730a2376c33bfe">Released WorldClockInvalidTimeMarkerError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="edda217031753a0f91b00f850269c4e52">Released WorldClockRewindError from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e3dc9ba60d9b397b2eefa7d956f9e27e4">Released StartupEvent.worldClockRegistry from beta to v2.11.0 in @minecraft/server</li>
+<li data-list-item-id="e9cdf392a82b9b1393dfc0ba72357e0c3">Released World.getClock from beta to v2.11.0 in @minecraft/server</li>
+</ul><h4 id="h_01M3SDX13WKGMRZRC4R8N6QQCT">Pack Settings</h4><ul><li data-list-item-id="e9290f5edbd74aca4a43802891c0fa600">The multiselect pack settings type now can take an optional field "selection_text" which when set will display the text in the selection dropdown of the multiselect in the pack settings UI. When not set, the currently selected items will be shown instead.</li></ul><h3 id="h_01M3SDX13W0SA6QFDXJ2J3SSTZ">Block Components</h3><h4 id="h_01M3SDX13WYSY990AJ4JVKYS88">Redstone Dust</h4><ul><li data-list-item-id="e5e9a12814c269ca9da2f91cce2d6697a">Redstone dust placed with a command or the Script API now keeps the redstone_north, redstone_east, redstone_south, and redstone_west states it was given, until a block update recalculates them from its surroundings (<a href="https://bugs.mojang.com/browse/MCPE-242340">MCPE-242340</a>)</li></ul><h3 id="h_01M3SDX13XKE6K9X7TTRC96AQE">Editor</h3><ul>
+<li data-list-item-id="ea75261e802049f4bf347aedb62b5e6c0">Editor location pointers, map markers, and ruler markers no longer take damage, flash red, or get knocked back when attacked</li>
+<li data-list-item-id="e96e11e3e450cffd5869607a400839e2f">Added a Delete Flood Widget button to the Flood tool panel</li>
+<li data-list-item-id="e6e416d6f7b3990212a7315a7d9ec6011">The Clear Content Badges and Restore New Content Badges buttons now announce their labels when UI text-to-speech is enabled</li>
+<li data-list-item-id="e467184a0fa897f1dd78b3a58b9e847bd">Fixed block icons turning pink and the editor becoming stuck on "Refreshing graphics, please wait..." after changing the graphics mode, such as toggling Vibrant Visuals</li>
+<li data-list-item-id="e84ff77a212cea015f8c6446a0883fa89">Fixed sign blocks in the block palette showing a plank texture instead of the sign, which made every wood type look alike</li>
+<li data-list-item-id="e00e9b7c449d45cecfd5cf8edc397c6fe">Fixed icons for custom blocks with slashes in their identifiers</li>
+<li data-list-item-id="ec56e90a323fce49fd4772d054701ca52">Editor block icons rendered through GeometryAtlas now display animated block textures</li>
+<li data-list-item-id="efd04ea15abcaadc0712984095310e6cc">Fixed Vibrant Visuals biome controls not refreshing after a graphics mode change</li>
+<li data-list-item-id="eee0eeeea6017bc43d54df59f32730251">Fixed block picker color swatches and color matching not updating when block color capture finishes after Editor initialization</li>
+<li data-list-item-id="ec620493fc32b4f7b5a9ad680e2d7fa2a">Fixed a bug that caused Block Picker list items to be misaligned</li>
+<li data-list-item-id="eae3cfb9ed592a64498dae1de8bbca611">Text will no longer change the mouse cursor to a pointer on hover</li>
+<li data-list-item-id="e924a60ce9b0d6bb573d6ea4ea3d94928">Removed ExportManager and PlaytestManager APIs, same functionality will be part of core editor UI</li>
+</ul><h3 id="h_01M3SDX13ZKFPKYPBGBKDEFZEA">Features</h3><ul><li data-list-item-id="e5e46a21669d591b3972eea167473f3e1">Replacement rules on Ore Features no longer get silently skipped if the may_replace field is omitted.</li></ul><h3 id="h_01M3SDX140JQEEFXFF1K5KM8GV">Stability and Performance</h3><ul><li data-list-item-id="eb6f72d8d05213ff081325d74dde16273">Hardened JSON parsing across resource loading and processing with iterative parsing and a maximum document size of 128 MB.</li></ul><h3 id="h_01M3SDX140NT3A9N2JSP2TQMK0">User Interface</h3><ul><li data-list-item-id="e4bd06c5f7d3579f71d1d97e7cc184107">Added messages that explain why matchmaking queues are canceled</li></ul>
+<hr>
+<h2 id="h_01M3SDX140MVG7AE7XRFW5P0E2">Experimental Technical Updates</h2><h3 id="h_01M3SDX1418806KG5FBNWQET22">API</h3><ul>
+<li data-list-item-id="e650209be4881348ea39e6100f612779e">Added the world.beforeEvents.playerItemAttackEntity event in beta to let scripts cancel an attack initiated through a player item interaction before it causes authoritative attack effects</li>
+<li data-list-item-id="e892f299f87b64e18ae61b647332b95be">Added class BlockRecipeProcessingComponent to beta for accessing recipe processing inputs and output (initially supporting the crafter block)</li>
+<li data-list-item-id="e84441b9ae8bf049910da9b0d08225387">Added beta Script API access to the minecraft:vibration_properties block component, including methods to read whether vibrations can be dampened or occluded</li>
+<li data-list-item-id="e26dc20a672ed06bc674ff88998216b0b">Added class PlayerCursorItemGrabAfterEventSignal to beta</li>
+<li data-list-item-id="e94e8fe2ce7623f05c09bfd7d04a6687c">Added class PlayerCursorItemGrabAfterEvent to beta</li>
+<li data-list-item-id="e6161e371a107318bf348db2c350f36a1">Added class PlayerCursorItemReleaseAfterEventSignal to beta</li>
+<li data-list-item-id="ef08d3fe8ee2a56bf318565e38aeda0c6">Added class PlayerCursorItemReleaseAfterEvent to beta</li>
+<li data-list-item-id="eeb4e49332f7a7f40ab203e7d73f6c1f0">Added property WorldAfterEvents.playerCursorItemGrab to beta</li>
+<li data-list-item-id="e3862568d640fde48d3d9007cc3806107">Added property WorldAfterEvents.playerCursorItemRelease to beta</li>
+</ul><h3 id="h_01M3SDX144XV83PWAK8JEDX985">Blocks</h3><ul>
+<li data-list-item-id="e94d19342a3fb0683d9027daabb95b581">Added an optional title field to container in the minecraft:block_entity block component, accepting literal text or localization keys of 1 to 256 characters with Upcoming Creator Features enabled; omitting the field leaves the container heading blank</li>
+<li data-list-item-id="e6725e4f83d194b74f09fe0fd245bb430">Data-driven container titles now stay on one line and truncate with ... when needed in Classic and Pocket UI, including after localization</li>
+<li data-list-item-id="e72ab38d26a7b7bd14ad8e4010bb68277">Added the experimental minecraft:enchantment_power_transmitter block component, which defines whether a block can transmit enchantment power. If set to true and a block with this component is placed in the 1 block gap between an enchantment table and a bookshelf, the enchantment table will remain powered by the bookshelf</li>
+<li data-list-item-id="e025339710b7f660ecd5bfb3eb09c0e17">Requires format version 1.26.60 and the Upcoming Creator Features experiment</li>
+<li data-list-item-id="ecfa418bc2edbfd9d9854f1d05d2a2f18">Added the experimental minecraft:vibration_properties block component, which defines whether a custom block dampens or occludes vibrations through the dampen_vibrations and occlude_vibrations properties<ul><li data-list-item-id="ef7a83e083787d0abe840828216f4974b">Requires format version 1.26.60 and the Upcoming Creator Features experiment</li></ul>
+</li>
+<li data-list-item-id="e193b0d796e05b291adf253c0fd7cdc2b">Added the experimental minecraft:neighbor_change block component, which lets creators configure which neighboring block changes trigger the neighbor change after event for block custom components. Requires format version 1.26.60 and Upcoming Creator Features</li>
+</ul><pre class="language-auto">{
+    "format_version": "1.26.60",
+    "minecraft:block": {
+        "description": {
+            "identifier": "demo:neighbor_listener_all"
+        },
+        "components": {
+            "minecraft:neighbor_change": {
+                "neighbor_directions": ["all"] // "up", "down", "north", "west", "east", "south" also acceptable
+            },
+            "demo:neighbor_change_listener": {}
+        }
+    }
+}
+</pre><ul><li data-list-item-id="e402537281d0a197d81ec73d58ae6f76d">Added the beta onNeighborChanged event for custom block components<ul>
+<li data-list-item-id="e080c1292cb952b6f417ae912c18e2c77">Use minecraft:neighbor_change.neighbor_directions to choose which neighboring directions trigger the event.</li>
+<li data-list-item-id="e87c9952c581915c94eca643803df537e">Call BlockComponentNeighborChangedAfterEvent.getChanges to get the neighboring block changes.</li>
+<li data-list-item-id="e07fd6b971416345981e8957dee7c80bb">For each tick, the game queues one event for each listening block with neighbor changes. Changes from different ticks create separate events, even if delivery is delayed.</li>
+<li data-list-item-id="e9f56b5b6500da600eba30133beaf3e86">Each chunk queues at most 4,096 events and delivers at most 100 events per tick. New events are dropped while the queue is full.</li>
+<li data-list-item-id="e73fa1c4c9c0d942f6ec71c5738dde8cb">BlockComponentNeighborChangedAfterEvent.getChanges returns one NeighborChange for each direction that changed during the tick.</li>
+<li data-list-item-id="e43d3e9ea2ba41945ea1e4d5a60e099a5">If one direction changes more than once during a tick, previousPermutation contains the permutation before the first change and blockPermutation contains the permutation after the last change. Intermediate permutations are not included.</li>
+<li data-list-item-id="e42ae3efc113d362a69c7b7872c223c44">NeighborChange.direction points from the listening block to the neighbor that changed.</li>
+<li data-list-item-id="ef66aed8940ad6a1fd31813ee33d3a6d2">BlockComponentNeighborChangedAfterEvent.block is a live handle to the listening block. The permutations returned by getChanges are snapshots of the changed neighbor.</li>
+<li data-list-item-id="e066fd2999dcd5f47bff918f400c641eb">If the block does not have minecraft:neighbor_change, changes from all neighboring directions can trigger the event.</li>
+</ul>
+</li></ul>
