@@ -1,0 +1,131 @@
+<h2 id="h_01M4TT26NMR7FEZ24TAZ6S54RY">Technical Updates</h2><h4 id="h_01M4TT26NMCD0BDFDQ34SHA1T4">Blocks</h4><ul><li data-list-item-id="e094a3dd961f1354f3daec223e30d4e75">Added the minecraft:jukebox_playlist_source block component<ul>
+<li data-list-item-id="e65002512b4c5c06b03df84eb4d5e1d70">Marks a block as a source of Music Discs for a Jukebox directly below it</li>
+<li data-list-item-id="e1117aba88b61a14d5f74b521a22b576f">Requires a compatible single container</li>
+</ul>
+</li></ul><h3 id="h_01M4TT26NNKSCJSVJJ1ME4M69T">API</h3><ul>
+<li data-list-item-id="e75ead177852616e3ef2486e6c3bb99d5">Fixed Container.setItem and ContainerSlot.setItem to clamp item stack sizes to the item's maximum stack size</li>
+<li data-list-item-id="ecc0ddb3f5c2778974547ccd4526ead47">Fixing some scenarios were the text length was incorrectly calculated for RawText used by PrimitiveText.</li>
+<li data-list-item-id="e04a26a8df8abe97f50f238478004fe11">Script API string arguments now preserve embedded NUL (\0) characters instead of being truncated</li>
+<li data-list-item-id="e454e8ec12815c5bd66ed319f0528b7c0">Added additional error context information when an exception is thrown inside of an event callback.</li>
+<li data-list-item-id="ecfa5385f79f2f3eff9413a7df2e37b52">Added Newline and whitespace changes to the formatting of the stack error context for exceptions.</li>
+<li data-list-item-id="e254b58a63d6eb1a30ebf49b90529e88e">Released @minecraft/server version 2.12.0</li>
+<li data-list-item-id="ec35feb67d6e24997899d87b2ca9fd505">Added @minecraft/server version 2.13.0-beta</li>
+<li data-list-item-id="eb1bb904be50d2e1ee438e0402b4db1bb">Added topCloseButtonVisible property to CustomFormOptions in @minecraft/server-ui beta.</li>
+</ul><h3 id="h_01M4TT26NQWBM9KSMEWFN1E0PV">Block Components</h3><h4 id="h_01M4TT26NQH10D8HM3333CKM17">Doors</h4><ul><li data-list-item-id="e045ce3fd86f4ece10ef4ba0564c68606">The upper half of a door now reports the same open_bit block state as the lower half, rather than always reporting the door as closed. This covers doors placed by players, doors generated as part of a structure, and doors in existing worlds, which are corrected the first time their chunk loads</li></ul><h4 id="h_01M4TT26NQEP4S7CWJ8R5PNAP4">Repeater</h4><ul>
+<li data-list-item-id="e82dd32500b7d13a51e00a664808b9b19">Repeater blocks now expose a locked block state that is true while a powered repeater or comparator is feeding one of the repeater's side inputs</li>
+<li data-list-item-id="eae7db738a838c7188828605f75b6d76b">For new worlds (base game version 1.26.60 and later), repeater locked state changes now trigger neighbor block updates for parity with Java Edition; existing worlds keep the prior client-only update behavior</li>
+</ul><h4 id="h_01M4TT26NRJFB3J6WWJKKTESDP">Scaffolding</h4><ul>
+<li data-list-item-id="e37c0271bc65f848cb38f9ea2a14b1dda">Scaffolding blocks now expose a bottom block state that is true when the block below provides no support and is not another scaffolding</li>
+<li data-list-item-id="ea85e215c33fa8697931a277b3f029c25">For new worlds (base game version 1.26.60 and later), scaffolding bottom state changes now trigger neighbor block updates for parity with Java Edition; existing worlds keep the prior client-only update behavior</li>
+</ul><h3 id="h_01M4TT26NSS1M0410TJ5JBRZCD">Blocks</h3><ul><li data-list-item-id="eeb66dbc521c59795e4e2c925cd8c8d81">Fixed issue where destruction_particles and precipitation_interactions component overrides on block permutations would be ignored (<a href="https://bugs.mojang.com/browse/MCPE-237074">MCPE-237074</a>)</li></ul><h3 id="h_01M4TT26NSHDPGG40499R3HH7P">Editor</h3><ul>
+<li data-list-item-id="eae439e96f47f652b002173d4704b7fe5">Added support for filter icon tooltip on the Editor List View control.</li>
+<li data-list-item-id="ec23e6391d76b5d5527e45096382105b5">Added group sorting, dynamic height configuration and noMargins style for IListPanePropertyItem API</li>
+<li data-list-item-id="eb23d17025ba5d128336a5ba608f606e8">Fixed a bug where the selected Chunks are not reflecting the biome changes in Biome Data Assignment Tool</li>
+<li data-list-item-id="eec1a18f68c3051ecef87c7df67c58c61">Fixed an assert that occurred when interacting with Party invite toast using its hotkey in Editor mode</li>
+<li data-list-item-id="ee594c896b9555ef5eae73a155da545fd">Fixed a bug where the Custom Time UI element would remain invisible if the Presets dropdown was changed by changing the Daylight Cycle dropdown</li>
+<li data-list-item-id="e017fbe9d83f03659a9074b430062db51">Fixed issue that was allowing to create multiple empty layouts</li>
+<li data-list-item-id="eb7dab35b298e04ead51b6024a30bc727">Fixed a bug where the tooltip on the action item for Layouts Management was inconsistent</li>
+</ul><h3 id="h_01M4TT26NVWF5B6PX92QCZNWW7">Entity Components</h3><ul>
+<li data-list-item-id="eb479b07043b7998316e4fbb4e53c709f">The minecraft:transformation component now preserves empty equipment slots when preserve_equipment is set to true</li>
+<li data-list-item-id="e88e72e892db6bcae556f3a075eff9596">Made schema for the minecraft:annotation.break_door component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</li>
+<li data-list-item-id="e39484b41f94b1ae3b97499695ee79823">Made schema for the minecraft:attack component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.<ul><li data-list-item-id="eb3932c433146ffe8e5068aca0e34fe5a">damage now only accepts a scalar or an object with min and max values. Array values are no longer valid.</li></ul>
+</li>
+<li data-list-item-id="ea32aba01121c9934a072f1758e7f2445">Made schema for the minecraft:inventory component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</li>
+<li data-list-item-id="e44a4fcfc80f863e00d589a5ac5392b68">Made schema for the minecraft:spell_effects component stricter when parsing and will fail to load an entity json that has invalid data in versions 1.26.60 and newer.</li>
+<li data-list-item-id="e551f0be6fd22bf7a19217f3e6e9fbf90">The minecraft:can_stand_on_brittle_ice component enables any mob to stand on Brittle Ice without breaking it<ul><li data-list-item-id="e4eda98ada3b4139b9058b3b789007639">Used by defining the component as follows: "minecraft:can_stand_on_brittle_ice": {}</li></ul>
+</li>
+</ul><h3 id="h_01M4TT26NXCGN78XC0NZ32BR7G">Features</h3><ul><li data-list-item-id="eb6afff32ffd9564d6d5ca33d196beedb">
+<p>Added the internal-only minecraft:crevasse_feature world generation feature, which carves a winding, tapered crevasse into exposed terrain</p>
+<ul>
+<li data-list-item-id="ea2bcbab1ebd64db91b03d579341e9d79">This feature is not currently available for use in creator content</li>
+<li data-list-item-id="ebf5bfd708a6e166fc222037ebcb0e830">The crevasse follows the terrain surface, extends in opposite directions from its placement position, and requires a minimum connected footprint before carving<ul><li data-list-item-id="eda3b3b80e4bc6af427c8ba8ed05ed5ae">The following fields configure generation:<ul>
+<li data-list-item-id="e73447509d1b603277d1209b88bbd6944">max_length: Maximum end-to-end length in blocks, from 4 to 16; defaults to 16</li>
+<li data-list-item-id="effd07341e08a9f14aa44d8520ed084a2">max_width: Maximum cross-section width in blocks, from 2 to 8; defaults to 4</li>
+<li data-list-item-id="ed8323767ca8a4c7be80bd2d50405d642">min_footprint: Minimum connected horizontal footprint required before carving, from 1 to 32 blocks; defaults to 10</li>
+<li data-list-item-id="e6c43e7df489d46e3c5cb4837870d4d9b">twistiness: Amount of horizontal curvature, from 0.0 to 16.0; defaults to 4.0</li>
+<li data-list-item-id="e20190459f0670fb30a4c039f24dd1d23">carve_depth: Range used to select the carve depth below the origin terrain surface, from 4 to 32 blocks; defaults to [6, 10]</li>
+<li data-list-item-id="ea4270a9b55b4650a87356be16938f54d">fill_depth: Range used to select the fill depth below the origin terrain surface, from 0 to 32 blocks; defaults to [4, 6]</li>
+<li data-list-item-id="e64cfa6cd981f9142fed263446fc5e370">surface_block: Optional block placed over the crevasse opening; omitted by default</li>
+<li data-list-item-id="e060f1743be00da8376d76bb90306315b">fill_block: Optional block placed at or below the selected fill depth; omitted by default</li>
+</ul>
+</li></ul>
+</li>
+<li data-list-item-id="e9b886008a382f20c4fe80f0a354558cd">Example code:</li>
+</ul>
+<pre class="language-auto">"format_version": "1.26.50",
+"minecraft:crevasse_feature": {
+    "identifier": "example:ice_crevasse_feature"
+  "max_length": 16,
+  "max_width": 4,
+  "min_footprint": 10,
+  "twistiness": 4.0,
+  "carve_depth": {
+    "range_min": 6,
+    "range_max": 10
+  "fill_depth": {
+    "range_max": 6
+  "surface_block": "minecraft:ice",
+  "fill_block": "minecraft:water"
+</pre>
+</li></ul><h3 id="h_01M4TT26P3CEXW867B6C214JXV">Item Components</h3><ul><li data-list-item-id="e0269ab8950e9add201eaaeec232ae278">Items with the minecraft:damage_absorption component now absorb damage when the Unbreaking enchantment prevents durability loss (<a href="https://bugs.mojang.com/browse/MCPE-237532">MCPE-237532</a>)</li></ul><h3 id="h_01M4TT26P3V3J3NJZB1WW3AMQV">Packs</h3><ul><li data-list-item-id="e3e04ecebb8110cf9234d2b1ec4eb1e42">System packs can no longer be overridden by development packs with the same identity.</li></ul><h3 id="h_01M4TT26P4Q8B6F8ZS9RBT3VDB">Points of Interest</h3><ul>
+<li data-list-item-id="e834ed3bbd6ab3052c0a3f850c8146e61">Released support for defining point-of-interest types with hierarchical tags in behavior packs</li>
+<li data-list-item-id="e40ee25d9f3d0ba15d3ca553e24247d33">Released /locate poi for locating registered points by type or tag</li>
+</ul><h3 id="h_01M4TT26P44K4N37P65D1ATJNZ">Stability and Performance</h3><ul><li data-list-item-id="e736599ba9dac2c69a87d88121d6d6265">Performance improvements for memory allocation on Android</li></ul><h3 id="h_01M4TT26P4TJW7NPFY4KJ3NKP0">User Interface</h3><ul>
+<li data-list-item-id="ecadbaa1658436e17e6db8215da55fe0e">Downloading Marketplace content no longer deletes development resource, behavior, or skin packs with matching UUIDs</li>
+<li data-list-item-id="e2050a84c6c07aa69f195649d2fce1c93">Malformed JSON UI in resource packs (unresolved control names, invalid anchors, unknown control types, unsolvable layouts, malformed binding expressions, and view binding loops) is now reported as a content log error</li>
+<li data-list-item-id="e60b569f7b909a68c685a8a146b060192">Route transitions are now built from animation selectors with createRouteTransition, so an animation is data that can depend on the from/to navigation pair rather than a bespoke transition component</li>
+<li data-list-item-id="e4492cd23002b333451d29d150c1dd1ae">Route transitions now live in the standalone @mojang/react-route-transition package, with the screen animation setting in @mojang/react-screen-animation, so both can be consumed without depending on @mojang/ui</li>
+</ul>
+<hr>
+<h2 id="h_01M4TT26P691KW3D8EKZ80QN9T">Experimental Technical Updates</h2><h3 id="h_01M4TT26P6K8SZHXJNJ7A2QZNJ">Entity</h3><ul><li data-list-item-id="efa42c6dba77baf922cdd1f1230efd4fd">Added beta Script API support for positioning entities as passengers of blocks<ul>
+<li data-list-item-id="ec959f61be7b539a0f96b927c7b875256">Entity.startPassengerOfBlock(blockPosition, offset, rotation, rotationLimit, emote) positions an entity as a passenger of a block, with a position offset, rotation, rotation limit, and PassengerOfBlockEmoteType (Standing, Riding, or Laying)</li>
+<li data-list-item-id="ec43016fde0040c73bfb607fa2675639d">Entity.stopPassengerOfBlock() stops an entity from being a passenger of a block</li>
+<li data-list-item-id="e7ff20e3e452494868360cc9896654d38">The read-only Entity.isPassengerOfBlock property reports whether an entity is a passenger of a block</li>
+<li data-list-item-id="e220622a926e17e181dca89347bd4e8bc">Destroying or changing a block does not automatically stop an entity from being its passenger; scripts must call Entity.stopPassengerOfBlock() because blocks are agnostic of their passengers</li>
+<li data-list-item-id="e0f6b0d29005cf7ba06bcffeacf0f6ad0">The existing query.is_riding returns true when an entity is riding a vehicle or is a passenger of a block in the Riding pose; the new query.is_laying returns true when an entity is a passenger of a block in the Laying pose. When isPassengerOfBlock is true and both queries are false, the entity is in the Standing pose for animation</li>
+</ul>
+</li></ul><h3 id="h_01M4TT26P8PMMYT0YGS85Z5JRE">API</h3><ul>
+<li data-list-item-id="e6a95d11a8b73714fe9c3b98cea2d0e16">Updated the ScriptPlayer.playMusic method in beta for playing music tracks for an individual player<ul>
+<li data-list-item-id="ea686d4e67d64f011bfa7d4b3b760942b">Now returns a SoundInstance when the MusicOptions.fade value is zero or not given</li>
+<li data-list-item-id="e73dc6b697e5fce4e4f2e27da6a15a65c">Returns undefined when the MusicOptions.fade value is greater than zero</li>
+<li data-list-item-id="e8aed3526fa02547199087f54b6b2764a">Can now pass a SoundDefinition into the trackId field</li>
+</ul>
+</li>
+<li data-list-item-id="e3141f9e7e4c236d1684ee426166f8189">Updated the ScriptWorld.playMusic method in beta for playing music tracks for all players in the world<ul>
+<li data-list-item-id="e40dab6c715383b5a2d1fa04accb2290d">Now returns a SoundInstance when the MusicOptions.fade value is zero or not given</li>
+<li data-list-item-id="e86db838ad153f5f6817c5e00366d0d68">Returns undefined when the MusicOptions.fade value is greater than zero</li>
+<li data-list-item-id="e901f22c41842cecb1d6eb8caac17a612">Can now pass a SoundDefinition into the trackId field</li>
+</ul>
+</li>
+<li data-list-item-id="e85ec2e56c07c6672773bf74eab75b99a">Added support for the minecraft:chiseled_bookshelf block to BlockInventoryComponent in beta</li>
+<li data-list-item-id="ef6d497e875cc8ef40422cd8d11ed9a27">Added ItemBlockEntityStorageComponent item component behind beta<ul>
+<li data-list-item-id="edc885a317565560c1b620cb5b7311d04">It may be accessed on any item-stack</li>
+<li data-list-item-id="e22566a6eae0beea2e0f899edac7b9863">It has the following methods, store, release, transfer, getEntities and size which work like their BlockEntityStorageComponent counterparts<ul><li data-list-item-id="e59a0b56c27a2a231470e89cd2117bdd5">release however takes an extra position parameter to decide where the entity is being released</li></ul>
+</li>
+<li data-list-item-id="e81ee405d4a3a04d9300ffb2a55aa4254">The component will be pre-populated if the item-stack results from a successful carry_over_block_entity_data loot function</li>
+<li data-list-item-id="e36e75f4970db4fc5e85c62adc4cb8f79">Stored entities will be carried over the corresponding placed block if it supports entity-storage</li>
+</ul>
+</li>
+</ul><h4 id="h_01M4TT26PDZY8WQTHG2AC3A1KM">CarryOverBlockEntityDataFunction</h4><ul><li data-list-item-id="ef759964975766a74935028ba3f63c3e0">Added the read-only beta property entityStorage to expose whether the loot function carries stored entities from the block entity to the dropped item</li></ul><h3 id="h_01M4TT26PD9PR6YS21Q1YQX8YJ">Blocks</h3><ul>
+<li data-list-item-id="e5df8d013981697987f6d4eb6b5e975e9">Added the optional Boolean field entity_storage to the carry_over_block_entity_data loot function, defaulting to false and requiring the Upcoming Creator Features experiment</li>
+<li data-list-item-id="e0356bae61091789ac56796ea176951c1">When entity_storage is true, stored entities are copied from the block entity to the dropped item without being released, independently of the dynamic_properties option</li>
+<li data-list-item-id="e08da53062c1bf94d8ee795b54219f451">Placing the dropped item restores its stored entities when the placed block supports entity storage, without releasing them</li>
+<li data-list-item-id="e83a1ec1d42d587355c285c88d78e9142">Split BlockComponentNamedTickEvent's isName into name and isMine<ul>
+<li data-list-item-id="ec6ab28788eb8056dd944fef0526af9dc">name is a string property matching the name used when ScriptBlock.scheduleNamedTick was used</li>
+<li data-list-item-id="eeb97cdc51836441463a9ceb793eb5617">isMine is a method that returns true if the event was scheduled by your pack</li>
+</ul>
+</li>
+<li data-list-item-id="e3cbdf441eed5bffab4370eb570ff426d">Added two new methods to the Block API and renamed one<ul>
+<li data-list-item-id="e6ca9583879fe830a42b673f8406d4c1a">getScheduledNamedTickCount which returns the amount of named events scheduled at a position, agnostic of pack origin</li>
+<li data-list-item-id="e287e24e2703d998050de5cee975f6986">getAllScheduledNamedTicks which returns the vector of named events scheduled at a position by that pack</li>
+<li data-list-item-id="e47083a1598873b01cbeb5ce2fb412d92">removeScheduledNamedTick renamed to removeScheduledNamedTicks</li>
+</ul>
+</li>
+</ul><h4 id="h_01M4TT26PF8TXW2N24JT18E971">minecraft:block_entity</h4><ul>
+<li data-list-item-id="e54f7c05a8c33983924084f5a2bc83b95">Added the optional show_ui_on_interaction boolean to container for block format versions 1.26.20 and later with Upcoming Creator Features enabled; it defaults to true</li>
+<li data-list-item-id="e322322e9bbba452fe5a9aa93ec3fd713">Setting show_ui_on_interaction to false disables the built-in container UI and allows normal block interaction events, including registered onPlayerInteract callbacks, to run instead; omitting the field or setting it to true preserves container opening without those callbacks</li>
+<li data-list-item-id="ebe687a9812955835846c0c6a7d7e889e">Custom containers now follow chest interaction permissions, preventing container opening and interaction callbacks for players without permission to open containers, even when the UI is disabled</li>
+<li data-list-item-id="ed074fe98fe4978879c440e980dec184a">Custom containers are now recognized as interactive container blocks, preventing duplicate client-side use of held items during interaction</li>
+<li data-list-item-id="ea1a146940b33ccf5d2c274a6d2511001">The HUD now shows the "Open" interaction hint for custom containers only when their UI is enabled</li>
+</ul><h3 id="h_01M4TT26PGXVA774ZJE57HC8C7">Entity Components</h3><ul><li data-list-item-id="e74e1cb776e6995e1017f9e4bf98ddb59">Added a new experimental minecraft:time_marker_sensor entity component, available to entity definitions using the beta format version, which runs an entity event every time a named time marker fires on a named world clock</li></ul><h3 id="h_01M4TT26PHKJDWZ94CMX0J6BFX">Features</h3><ul><li data-list-item-id="eb002f71ca896cc1c8524d9b88e2132df">POI type definitions now respect behavior pack stacking order, allowing higher-priority packs to override definitions from lower-priority packs</li></ul><h3 id="h_01M4TT26PH1P3D70NRJ8ACSYZS">Graphical</h3><ul><li data-list-item-id="e15da05623e395666f6b07ac6ae4eb10f">Under the RenderDragon Features for Creators Experiment<ul><li data-list-item-id="e1e9a0433c1e8f75a50cffea0f5363a53">Ice crystals now emit a light blue light color</li></ul>
+</li></ul>
