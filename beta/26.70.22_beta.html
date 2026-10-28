@@ -1,0 +1,61 @@
+<h2 id="h_01M61HHVHW62KVNHCPTJKZ2R62">Technical Updates</h2><h3 id="h_01M61HHVHWMGFGNQ9AMJAWCNQ5">Items</h3><ul><li data-list-item-id="e03ecdce8de5bb33bbe72aa3f28b9c5d5">Added new tag for sulfur cubes to make use of for physics determination and absorbing:<ul><li data-list-item-id="ed2b184c238c6bb1d8660299c67381cc9">minecraft:sulfur_cube_archetype_cold</li></ul>
+</li></ul><h3 id="h_01M61HHVHX9NZD5KSJ5SWT22AP">AI Goals</h3><h4 id="h_01M61HHVHXGSCW2169WXQ3Z34C">minecraft:behavior.move_to_land</h4><ul>
+<li data-list-item-id="e2b1183cda8f1c7af8faff536d605a1d2">Now only targets land the mob has a full path to, so mobs no longer swim against a wall trying to reach land on the other side</li>
+<li data-list-item-id="e7e4f94b64d49b523e2dc8ed1b72e3240">No longer gives up as soon as it starts when goal_radius is smaller than the 2 blocks the mob moves past the land</li>
+<li data-list-item-id="e99b673a2dda9a5f812c4b605c68bcd4e">When search_count is above 0, sampled positions are now snapped to the ground, so mobs in deep water find nearby land much more reliably</li>
+</ul><h3 id="h_01M61HHVHY3PPM3AYBHNKM2ZRN">API</h3><ul>
+<li data-list-item-id="eff23e132be002bad912ada3dc5d9df90">Fixed the Wither entity becoming invalid before scripts could access it in world.afterEvents.entityDie callbacks</li>
+<li data-list-item-id="efd8db8f70397d3346cbdbe671ef4aa75">The BlockMapColorComponent can now be fetched on any block (<a href="https://bugs.mojang.com/browse/MCPE-240722">MCPE-240722</a>)</li>
+<li data-list-item-id="e5cc4ad5da56555c1358b9f843e710e0e">PrimitiveText and DebugText are no longer hidden by the "In Game Player Names" option being disabled.</li>
+</ul><h3 id="h_01M61HHVHZ9B3SG3T1Z0W8RHXS">Biome Components</h3><h4 id="h_01M61HHVHZTCA76QHYQVPJP652">minecraft:tags</h4><ul><li data-list-item-id="e69a8a28d877fde568fac378710a045c4">Added the frozen tag to the Ice Caves biome</li></ul><h3 id="h_01M61HHVJ0JKS06FH7TP21SF10">Blocks</h3><ul><li data-list-item-id="e3498bfb8b3a019a00dbde76998af9225">Box arrays in minecraft:collision_box have been updated as follows from version 1.26.70 and onwards:<ul>
+<li data-list-item-id="edee2ca2fefaf788f00239dff75e9bd10">'origin' and 'size' have been deprecated in favor of 'min' and 'max'.</li>
+<li data-list-item-id="ed81309cefa6a9efd893f2c6e20d7700e">'min' and 'max' were removed from version 1.26.60. Their minimum version is now 1.26.70 and they no longer require the "UpcomingCreatorFeatures" experiment to use.</li>
+<li data-list-item-id="e4ac0ac4c21c9f5c4b33aef31a0996a60">The maximum box count limit for min and max arrays is now 32.</li>
+<li data-list-item-id="e3761ee79402d5a8350235aa1869bba86">The component will not accept empty values.</li>
+</ul>
+</li></ul><h3 id="h_01M61HHVJ2X0XFB1961S8B24M7">Dedicated Server</h3><ul><li data-list-item-id="e5e39bb2bf37e04b4a3280695d9ceacc8">Added pack optimization support to Linux dedicated server.</li></ul><h3 id="h_01M61HHVJ2HQY7MTW038Z20CMC">Editor</h3><ul><li data-list-item-id="ef4a3787ca9141663884283edb14d931e">Added support for keyboard usage to affect structures in Layout Editor</li></ul><h3 id="h_01M61HHVJ2QF6Q21EY1WV3AEFZ">Entity Components</h3><ul><li data-list-item-id="ee1bb980307be47a5e691c2749aeb1a2c">Added the following fields to the minecraft:teleport component<ul>
+<li data-list-item-id="ebec5429676a6fd44d4091a73279fae73">target_teleport_distance: The minimum and maximum distance the entity can teleport towards its target<ul><li data-list-item-id="ed6c9ea8c7fab5bfb969ea69479748baa">Defaults to [16.0, 16.0]</li></ul>
+</li>
+<li data-list-item-id="e47456ab97ef6de1a3d03ae7a469b56fd">target_teleport_offset: The maximum random offset, on each axis (x, y, z) and in either direction, added to the teleport direction<ul>
+<li data-list-item-id="e431029b260ee254cd029e8898e6ac78a">Defaults to [4.0, 8.0, 4.0]</li>
+<li data-list-item-id="e7fe318574063fa14ee2bbc54322f4296">on_teleport_sound: Level sound event played after a successful teleport<ul>
+<li data-list-item-id="ebbea85bf5d462f0226fba9af6e5bf265">Falls back to the default teleport sound if none is bound; use "undefined" for a silent teleport</li>
+<li data-list-item-id="e02265d7b67dc68acef368522d69e38ed">Defaults to teleport</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-list-item-id="e3f42e3dc0bc41d7e951164f5b8b0b01b">can_teleport_into_liquid: If set to true, the entity can teleport into blocks that contain liquids, such as water<ul><li data-list-item-id="e28a8166c14bb28f5a46c97f8f553d0b9">Defaults to false</li></ul>
+</li>
+</ul>
+</li></ul><h4 id="h_01M61HHVJ510BKRBP5DV3MG373">minecraft:trail</h4><ul><li data-list-item-id="e9caf96cec0545fe6071371600cba4972">Updated the minecraft:trail schema for format version 1.26.70<ul>
+<li data-list-item-id="ecc446fade2eefc8793183727ee8e5979">block_type defines the trail block to place</li>
+<li data-list-item-id="e3bda37e98bbc345aa1e7972707e9e20b">shape defines the horizontal placement pattern as corners, square, or circle</li>
+<li data-list-item-id="e4288f84c830c3a32dc59f99e3d03322c">extent defines the maximum horizontal distance from the center at which blocks can be placed</li>
+<li data-list-item-id="e1ab81be3f2fee29a971ce09019977a12">offset defines the trail block placement positions relative to the entity</li>
+<li data-list-item-id="ed94e0504024b523b71a1717a45970724">placement_filter defines the entity conditions required before processing placement positions</li>
+<li data-list-item-id="ecfa602e30c171a844e68b154d604b31b">placement_checks accepts none, block, or standard to control validation at each placement position</li>
+<li data-list-item-id="e4bed516b80ed8ca6cd1ced2f2c07e0b8">placement_conditions defines block requirements at vertical y_offset values from each placement position<ul>
+<li data-list-item-id="eb4d3f79cf0257e0b777f738d55cba79b">Entries combine with AND and block_types within an entry combine with OR</li>
+<li data-list-item-id="e89b8aa1105b0ec6e80e61e6baeb06c73">When omitted, placement_conditions defaults to [{ "y_offset": 0, "block_types": ["minecraft:air"] }]</li>
+</ul>
+</li>
+<li data-list-item-id="efa8132e3b0beb74a076aa32394391a37">place_only_on_block_position_change limits placement to ticks where the entity moves into a different block or lands, and defaults to false</li>
+</ul>
+</li></ul><h4 id="h_01M61HHVJ9QYC1WJ4JT3YFFGBK">minecraft:transformation</h4><ul><li data-list-item-id="ec4f5673b00e841e966b17efe2d965165">transformation_sound now respects entity-specific sound mappings in sounds.json</li></ul><h3 id="h_01M61HHVJAKZ3QW8RD4B5MYT3H">Entity Event Responses</h3><ul><li data-list-item-id="e4ab1d20d41bf8d72f4be61f0a76ac5cf">Added the "place_feature" entity event response, allowing features to be placed at the entity's position<ul>
+<li data-list-item-id="e3cfde01160f3d89eab7a4226ee52f582">The "feature" field allows to specify the type of feature to place</li>
+<li data-list-item-id="ea45f3df442dd1829c963de928dbbf340">The "target" field allows to specify which target entity's position to place the feature at</li>
+<li data-list-item-id="efd972658c16cd22c5929c93c81b08b52">This feature is currently only for internal use and will be made public in the future</li>
+</ul>
+</li></ul><h3 id="h_01M61HHVJAS8C33H09QFPSRJ00">User Interface</h3><ul>
+<li data-list-item-id="e01aa5d73d4cd6eb2b76c2251e7c6a8eb">Core engine query hooks, except useIsPaperDollSkinReadyQuery, are no longer exported from @mojang/bedrock-core-engine, so screens read engine data through React context hooks and tests provide it with mock providers instead of faking raw queries</li>
+<li data-list-item-id="efeebdd6882e9a20ad669ba2d6e0966bc">Screen reader state and user options now live in the standalone @mojang/react-screen-reader and @mojang/react-user-options packages</li>
+<li data-list-item-id="e8b1e7591d122db606af875e562811bbd">Split screen context values in @mojang/react-device-information are now facets and include isPrimaryUser</li>
+<li data-list-item-id="e0e953bbd8173740f8e626c2fde6e39d9">TestWrapper, visual regression examples and playground &lt;Examples&gt; now accept splitScreen, screenReader and userOptions props for mocking that data</li>
+<li data-list-item-id="ed3cb469e73e3f6000eb71782a5ae5060">Added "Close Creator Screens" keybinding to force close custom DDUI screens.</li>
+</ul>
+<hr>
+<h2 id="h_01M61HHVJCB8V0YQR4S16C2ZR1">Experimental Technical Updates</h2><h3 id="h_01M61HHVJD1DPA7B35XE33YFNR">API</h3><ul>
+<li data-list-item-id="e75de9203708b98261ee246de8878fa2b">Added class BlockItemFrameComponent to beta for inspecting, setting, replacing, and clearing the item displayed by item frames, with an option to drop the item when clearing</li>
+<li data-list-item-id="e11023d00b3eb67424143b2f1539d078b">Added getRotation and setRotation methods to BlockItemFrameComponent in beta for inspecting and setting item frame rotation in 45-degree increments, from None through Clockwise315</li>
+</ul>
