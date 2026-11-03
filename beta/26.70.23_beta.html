@@ -1,0 +1,81 @@
+<h2 id="h_01M6H0WME84FD5ZJ3EZWYKEBVG">Technical Updates</h2><h3 id="h_01M6H0WME85PZZSMNXY1ASVD2K">API</h3><ul>
+<li data-list-item-id="e352de8f2b4edf743af354a335ef8bb9c">Released the stable BlockVibrationPropertiesComponent Script API for reading a block's vibration behavior through getCanDampenVibrations() and getCanOccludeVibrations() in V2_12_0</li>
+<li data-list-item-id="e6817b50df5a64131b27e808b0e0d68c7">Released class BlockComponentNeighborChangedAfterEvent from beta to v2.12.0</li>
+<li data-list-item-id="e5f188a31fba51c43894d7e5d3d12ffe5">Released interface NeighborChange from beta to v2.12.0</li>
+<li data-list-item-id="e9e4e4c57a3382052bf9b8a952aa92964">Released BlockComponentNamedTickEvent from beta to v2.12.0 in @minecraft/server</li>
+<li data-list-item-id="ee0db00c9fa7dc4d66930325117eeae0c">Released ScriptBlock.scheduleNamedTick from beta to v2.12.0 in @minecraft/server</li>
+<li data-list-item-id="e405e7fc03fd1548f9f4ba9f53844af81">Released ScriptBlock.hasScheduledNamedTick from beta to v2.12.0 in @minecraft/server</li>
+<li data-list-item-id="e2edbc7b1083a2b20fb61ab72be262ca1">Released ScriptBlock.removeScheduledNamedTicks from beta to v2.12.0 in @minecraft/server</li>
+<li data-list-item-id="eaa3df2b09098016672cd3e408639742b">Released ScriptBlock.getScheduledNamedTickCount from beta to v2.12.0 in @minecraft/server</li>
+<li data-list-item-id="edafa4f7a1adbd8b852292a319a58a3f2">Released ScriptBlock.getAllScheduledNamedTicks from beta to v2.12.0 in @minecraft/server</li>
+</ul><h4 id="h_01M6H0WMEA4E8DNXHP2MM9489H">BlockInventoryComponent</h4><ul><li data-list-item-id="eeb6bd1546ddf2376991a748013878d20">Custom blocks whose minecraft:block_entity component declares a container now provide BlockInventoryComponent without requiring any experiments</li></ul><h4 id="h_01M6H0WMEBX7X7379XG0HXFAJZ">PoiBlockInstance</h4><ul><li data-list-item-id="e648feabee3a4c0a91cc407ef93ebf631">Fixed type returning undefined instead of a PoiBlockType object for instances returned by POI queries</li></ul><h3 id="h_01M6H0WMEC25MRH96BPN4FHK39">Block Components</h3><h4 id="h_01M6H0WMECYBFW6NFFMMQEHWZF">minecraft:block_entity</h4><ul><li data-list-item-id="ecf88e619320ad30222786a2d5cdc14b5">Released the container field from experimental, so custom blocks using format_version 1.26.20 or later no longer need the Upcoming Creator Features experiment to declare a container with slot_count (1 to 54) and the optional title and show_ui_on_interaction fields</li></ul><h3 id="h_01M6H0WMED5J8DV3504QFR2G3C">Blocks</h3><ul>
+<li data-list-item-id="e115b56fc7788357f4f38ea713f16eb57">Released the minecraft:vibration_properties block component for custom blocks in format version 1_26_60, with dampen_vibrations and occlude_vibrations properties that control whether blocks dampen or occlude vibrations</li>
+<li data-list-item-id="ec8cc52b38af2855f75650e6949fec1c2">Released the minecraft:neighbor_change block component from the Upcoming Creator Features experiment. It requires format version 1.26.60 or later<ul><li data-list-item-id="e93c2a79a9d242c7c085c30b56fca6318">neighbor_directions configures which neighboring directions trigger the onNeighborChanged block custom component event</li></ul>
+</li>
+<li data-list-item-id="e900e5c7ee3cdb7325fd53a34e682e850">Released the minecraft:enchantment_power_transmitter block component from the Upcoming Creator Features experiment. It requires format version 1.26.60 or later</li>
+</ul><h3 id="h_01M6H0WMEEV077BNW5EHEV17Q7">Commands</h3><ul><li data-list-item-id="ea1979a3323db7492c04f39db9811a3ad">Fixed POI records being copied into other regions when loading a world, causing /locate poi and scripting queries to return locations without matching POIs</li></ul><h4 id="h_01M6H0WMEF6FZECRB35ATBQ976">Dedicated Server</h4><ul>
+<li data-list-item-id="e5c490630f2332ce29886c4fc18615dc8">Updated PackOptimizer config format to take the output mode: brpak (default), brarchive or unpacked</li>
+<li data-list-item-id="e295c1011490b324bd47557da3f450ed8">When using PackOptimizer, each input pack is transformed according to the specified output mode, regardless of its original format</li>
+<li data-list-item-id="e44a38af1fde5b0b883cfcfa7ae371295">Improved error handling and feedback when using PackOptimizer</li>
+</ul><h3 id="h_01M6H0WMEFHNFDRRSJAGFA04YC">Editor</h3><ul>
+<li data-list-item-id="e2ea0d1b2ae45e51c7c988ece7aecb53d">Fixed a bug that caused simulation to be paused in editor test worlds</li>
+<li data-list-item-id="efb1fbf96753c9569ed1aa2b07438079e">Fixed a bug that caused broken blocks to not get added to player inventory</li>
+<li data-list-item-id="e96473e5a33738ec07b5f9e2dec6a89a8">Fixed an issue where pressing F4 in Editor mode to open the Social Drawer would trigger an error.</li>
+<li data-list-item-id="e18d651258980bd3dc6a1828a6d3d35f7">Fixed a bug that caused an error when selecting the Shadows Setting Group in the Vibrant Visuals pane</li>
+</ul><h3 id="h_01M6H0WMEGYAPF2XJWKSS6J4N1">Entities</h3><ul><li data-list-item-id="e3b2d91b8c24390b909f6524bef0e176e">Added the Beta-only field to an entity's description field clear_behaviors_on_component_changes to opt into clearing a mob's existing AI components when any component changes occur; it defaults to false for Beta documents</li></ul><h3 id="h_01M6H0WMEHC5BCDQ35TBM8HG3W">Entity Components</h3><ul>
+<li data-list-item-id="e8d35c0d5c2fc860623883652315c188d">Added a new minecraft:entity_rotation_always_follows_head entity component, available to entity definitions using the beta format version, which keeps the entity's rotation aligned with its head after look behaviors run<ul><li data-list-item-id="e7f4d5aec9a1d6cda983d3af5b9614e3f">It overrides the yaw set by movement components, so it is intended for entities that turn in place</li></ul>
+</li>
+<li data-list-item-id="e8e6da08dbe86aed94208dfe6e28e3162">Added a new minecraft:spherical_look_control entity component, which turns the entity's head toward targets set by look behaviors along the shortest arc in 3D, combining upward or downward rotation (pitch) with side-to-side rotation (yaw) in a single turn<ul>
+<li data-list-item-id="e29fd6eeb7ffff58dd94008e8c503aba8">Look requests turn at the average of the pitch and yaw speeds supplied by the look behavior, optionally scaled by distance</li>
+<li data-list-item-id="e32b0a125ba0da8bcf631ab3ae338ce25">With no look request, the head keeps its current direction unless its pitch is outside pitch_limits, in which case it returns toward the nearest limit at pitch_recovery_speed</li>
+<li data-list-item-id="eba83acd9eabee93ea704aac648b8e3b5">pitch_recovery_speed: The speed in degrees per second used to return the head's pitch within pitch_limits when no look request is present, from 0 to 3600, defaulting to 60<ul>
+<li data-list-item-id="e3dfb09c8ac09fd7e87a50e124fbcedfe">Set to 0 to disable pitch recovery when no look request is present</li>
+<li data-list-item-id="eaf7030d9e4b4d80a4db7ecbb1cf7a1be">Does not limit turning toward requested targets</li>
+</ul>
+</li>
+<li data-list-item-id="e1f4ff2890957282cbc8a7e5b905cd158">reference_distance: An optional positive distance in blocks at or below which the look behavior's average pitch and yaw speed applies unchanged<ul>
+<li data-list-item-id="eab9bf3383f717269ab929da715b0e7da">Beyond this distance, turn speed is multiplied by reference_distance divided by the target distance, so doubling the distance halves the speed</li>
+<li data-list-item-id="e3329bcd40133b76ec8664c8d6964e270">Distance is measured from the entity's breathing point to the requested look position</li>
+<li data-list-item-id="e883c0937e60189d56a9bbe8f8082f4b4">Applies only to position targets, with distance scaling disabled when omitted</li>
+</ul>
+</li>
+<li data-list-item-id="ef605d462b3c54de27c91693376d96806">pitch_limits: The min and max pitch in degrees, from -90 (straight up) to 90 (straight down) and defaulting to -90 and 90<ul><li data-list-item-id="ed17ca122f3bdc4750df48db8f856d742">Set both to the same value for a fixed pitch</li></ul>
+</li>
+<li data-list-item-id="e9f72ac7393501953b9bbac7694b6fa39">Only available to entity definitions using the beta format version</li>
+</ul>
+</li>
+</ul><h4 id="h_01M6H0WMEPH2KVEYP9DMMZ3CQD">minecraft:projectile</h4><ul><li data-list-item-id="e8ce6e811146d1a950dcbf02c046d096c">Added death_message_override to on_hit.impact_damage for entity format versions 1.26.70 and later, setting the localization key of the death message shown when the impact damage kills an entity<ul><li data-list-item-id="ed62fdc9e4a3cc1e7fb11b0b3459aabe7">In the death message, %1$s is the name of the killed entity and %2$s is the name of the projectile's owner, or of the projectile itself if it has no owner</li></ul>
+</li></ul><h3 id="h_01M6H0WMEQGQW3EZ6VFRZ7P9A7">User Interface</h3><h4 id="h_01M6H0WMEQT2C99Q50QPH6HSKB">Data-Driven Containers</h4><ul><li data-list-item-id="ebb3aaca980c58eb9029a93f19923f9d7">Creators are expected not to modify the UI for data-driven containers (ui/data_driven_container_screen.json and the data_driven_container namespace), as it may receive breaking changes in future updates and comes with no backwards compatibility guarantees</li></ul>
+<hr>
+<h2 id="h_01M6H0WMERZD8ZYTFV9H0A46E3">Experimental Technical Updates</h2><h3 id="h_01M6H0WMERC538QWSEXNCD30KA">API</h3><ul>
+<li data-list-item-id="e89c9c254435ba04a49964fd2f783d7ea">Added includeNamespace and excludeNamespace to BiomeFilter<ul>
+<li data-list-item-id="e39df46fc048ed699f470c92b5ceda969">If a namespace is added to includeNamespace, a biome using that namespace can be found</li>
+<li data-list-item-id="e6f7b646e4adbfe9402061b7f18d4812e">If a namespace is added to excludeNamespace, a biome using that namespace cannot be found</li>
+</ul>
+</li>
+<li data-list-item-id="e6cf43d9b49816108b096e61bf1c9bddf">Added includeNamespace and excludeNamespace to BlockFilter<ul>
+<li data-list-item-id="e62c1a9a55dcf5e52d2707fe2b4d58853">If a namespace is added to includeNamespace, a block using that namespace can be found</li>
+<li data-list-item-id="efeacec4a0915f86ecc67b16dcf1be341">If a namespace is added to excludeNamespace, a block using that namespace cannot be found</li>
+</ul>
+</li>
+<li data-list-item-id="e7b8f08240899bab08066836a9d3fca80">Added namespaces and excludeNamespaces to EntityFilter<ul>
+<li data-list-item-id="e53fff4e423c515c7c9fe576243e463d3">If a namespace is added to namespaces, an entity using that namespace can be found</li>
+<li data-list-item-id="e268753d14379dad45d6feaddf897dff1">If a namespace is added to excludeNamespaces, an entity using that namespace cannot be found</li>
+</ul>
+</li>
+<li data-list-item-id="e73cb8d4e2a8d50a4fefbfa0e03b8624f">Added world.afterEvents.portalActivate, PortalActivateAfterEvent, and PortalActivateAfterEventSignal to @minecraft/server in beta to notify scripts after a Nether portal is activated, providing its dimension, ignition location, and initiating player when known</li>
+<li data-list-item-id="efb260f425282206660e3a4d224907c52">Added property ItemCustomComponent.onReleaseUse to beta</li>
+<li data-list-item-id="edfb2ed03c029a9e7e57de6f364cd9898">Added two new methods to BlockEntityStorageComponent and ItemBlockEntityStorageComponent, still behind beta:<ul>
+<li data-list-item-id="eb8cde813f6a09c629796adc347bd3089">remove removes a stored entity from the current content pack's storage without releasing it into the world. No entity, experience, or item drops are spawned.</li>
+<li data-list-item-id="e4c6b468a01e088cabc31640bc7875431">totalSize returns the total number of entities stored in this block's entity storage across all content packs.</li>
+</ul>
+</li>
+</ul><h3 id="h_01M6H0WMEWV5A27GSJFSM6ZH99">Actor</h3><ul>
+<li data-list-item-id="e68ad36f3accf35ba02ad38ab32539746">Passenger of block will now take into account the rotation limit they were given</li>
+<li data-list-item-id="e9f9eae5a19f2cea346eea0b8ec82284d">Passenger of block will stop being passenger when their supporting block is removed or replaced with a different block type</li>
+</ul><h4 id="h_01M6H0WMEX72Z3TB8JVXBZYWCG">PlayerDimensionChangeAfterEvent</h4><ul><li data-list-item-id="e3d65643213f6c3ee948abd8032821065">Added the beta read-only source property, which reports what caused the player to change dimensions using the new PlayerDimensionChangeSource enum</li></ul><h4 id="h_01M6H0WMEYVR1RKZKWDVDCR7H5">PlayerDimensionChangeSource</h4><ul><li data-list-item-id="e11600a4aab4da3982e1049f002d7cfa8">Added the beta PlayerDimensionChangeSource enum with the values Portal, TeleportCommand, PlayerRespawn, and Unknown</li></ul><h3 id="h_01M6H0WMEYC6RQZE14MZ3SHEHQ">Blocks</h3><ul><li data-list-item-id="ea2bdd314043060a7c272d908809d0ac8">minecraft:collision_box has been updated to support voxel shape identifiers as a collision shape from 1.26.70 and onwards:<ul>
+<li data-list-item-id="ef37e6d439dfc74614827e7ec76ace948">Requires the "Voxel Shapes" experiment. Using the component as a 'bool' or a box array remains non-experimental.</li>
+<li data-list-item-id="e59fc5bdae3c75ac919450f6edc8d6ba6">Identifiers can be a custom voxel shape, minecraft:unit_cube, or minecraft:empty.</li>
+<li data-list-item-id="eff6ca836ee56273d121a5781a9402984">Voxel shapes that exceed the collision bounds of [0,0,0] to [16,24,16] will be clamped and registered with a warning. "format_version": "1.26.70", "identifier": "test:block_v1_26_70" "minecraft:collision_box": "custom:collision_shape"</li>
+</ul>
+</li></ul><h3 id="h_01M6H0WMEZR4YRSWEC446KA9JX">Ore UI Emoji</h3><ul><li data-list-item-id="e9e113abccdfaadca85dfb6ed8670097b">Support existing custom Minecraft emoji Unicode code points in Ore UI screens</li></ul>
